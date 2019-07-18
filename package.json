@@ -1,0 +1,19 @@
+{
+  "name": "politico-react",
+  "version": "1.0.0",
+  "description": "An application for voting into political office",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fantastic-genius/politico-react.git"
+  },
+  "author": "Hamzah Abdulfattah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fantastic-genius/politico-react/issues"
+  },
+  "homepage": "https://github.com/fantastic-genius/politico-react#readme"
+}
