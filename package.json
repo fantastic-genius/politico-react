@@ -8,7 +8,7 @@
     "coverage": "nyc report --reporter=text-lcov || coveralls",
     "dev:start": "rm -rf dist && webpack-dev-server --env.mode development --open --hot",
     "webpack": "webpack --env.mode development",
-    "client:build": "webpack --env.mode production",
+    "client:build": "rimraf dist && mkdir dist && webpack --env.mode production",
     "heroku:postbuild": "npm run client:build",
     "start": "babel-node server.js"
   },
