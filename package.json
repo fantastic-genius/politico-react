@@ -10,7 +10,7 @@
     "webpack": "webpack --env.mode development",
     "client:build": "rimraf dist && mkdir dist && webpack --env.mode production",
     "heroku:postbuild": "npm run client:build",
-    "start": "babel-node server.js"
+    "start": "npm run heroku:postbuild && babel-node server.js"
   },
   "repository": {
     "type": "git",
