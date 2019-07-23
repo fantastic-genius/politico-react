@@ -1,10 +1,12 @@
 {
     "root": true,
-    "extends": ["airbnb-base"],
+    "extends": ["airbnb-base", "prettier", "plugin:react/recommended"],
+    "plugins": ["prettier", "react"],
     "env": {
       "node": true,
       "mocha": true,
-      "es6": true 
+      "es6": true,
+      "browser": true
     },
     "rules": {
       "one-var": 0,
