@@ -1,5 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+
 
 module.exports = {
   entry: './src/index.js',
@@ -8,7 +12,11 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
+    alias: {
+      '@': path.resolve(__dirname),
+      '@styles': path.resolve(__dirname, 'src/styles')
+    }
   },
   module: {
     rules: [
@@ -25,7 +33,30 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        exclude: /node_modules/,
+        use: [
+          { loader: MiniCssExtractPlugin.loader },
+          'css-loader',
+          'postcss-loader'
+        ]
+      },
+      {
+        test: /\.(scss|sass)$/,
+        exclude: /node_modules/,
+        use: [
+          { loader: MiniCssExtractPlugin.loader },
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
+        ]
+      },
+      {
+        test: /\.(jpe?g|png)$/,
+        exclude: /node-modules/,
+        loader: 'file-loader',
+        options: {
+          outputPath: 'img/'
+        }
       }
     ]
   },
@@ -33,6 +64,17 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       inject: 'body'
+    }),
+    new MiniCssExtractPlugin({
+        filename: 'app.css',
+        chunkFilename: '[id].css'
     })
   ],
+  optimization: {
+    minimize: true,
+    minimizer: [
+        new TerserPlugin(),
+        new OptimizeCSSAssetsPlugin({})
+    ]
+}
 };
