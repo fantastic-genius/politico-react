@@ -15,7 +15,13 @@ module.exports = {
     extensions: ['.js', '.jsx'],
     alias: {
       '@': path.resolve(__dirname),
-      '@styles': path.resolve(__dirname, 'src/styles')
+      '@src': path.resolve(__dirname, 'src'),
+      '@styles': path.resolve(__dirname, 'src/styles'),
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@assets': path.resolve(__dirname, 'src/assets'),
+      '@pages': path.resolve(__dirname, 'src/pages'),
+      '@actions': path.resolve(__dirname, 'src/actions'),
+      '@reducers': path.resolve(__dirname, 'src/reducers')
     }
   },
   module: {
@@ -24,11 +30,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
-            plugins: ['@babel/plugin-transform-arrow-functions']
-          }
+          loader: 'babel-loader'
         }
       },
       {
