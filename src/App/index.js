@@ -1,9 +1,11 @@
 import React from 'react';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
+import Home from '@pages/Home';
 
 const App = () => (
-  <div>
-      <h1 className='title'>Welcome To Politico React</h1>
-  </div>
+  <Router>
+    <Route exact path="/" component={Home} />
+  </Router>
 );
 
 

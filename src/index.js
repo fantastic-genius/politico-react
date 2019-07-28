@@ -1,7 +1,13 @@
-// eslint-disable-next-line import/no-unresolved
 import '@styles/style.css';
 import React from 'react';
 import ReactDom from 'react-dom';
-import App from './App'
+import { Provider } from 'react-redux';
+import App from './App';
+import store from './store';
 
-ReactDom.render(<App />, document.getElementById('app'))
+ReactDom.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('app')
+)
