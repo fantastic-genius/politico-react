@@ -12,10 +12,17 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.css'],
     alias: {
       '@': path.resolve(__dirname),
-      '@styles': path.resolve(__dirname, 'src/styles')
+      '@src': path.resolve(__dirname, 'src'),
+      '@styles': path.resolve(__dirname, 'src/styles'),
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@assets': path.resolve(__dirname, 'src/assets'),
+      '@pages': path.resolve(__dirname, 'src/pages'),
+      '@store': path.resolve(__dirname, 'src/store'),
+      '@actions': path.resolve(__dirname, 'src/store/actions'),
+      '@reducers': path.resolve(__dirname, 'src/store/reducers'),
     }
   },
   module: {
@@ -24,11 +31,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
-            plugins: ['@babel/plugin-transform-arrow-functions']
-          }
+          loader: 'babel-loader'
         }
       },
       {

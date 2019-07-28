@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> Rendering should render Home page correctly 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <Home />
+</Router>
+`;
+
+exports[`<Home /> Rendering should render Home page correctly woth its children 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Home>
+      <div
+        className="container home-con"
+      >
+        <NavBar>
+          <div>
+            <header>
+              <div
+                className="app-name"
+              >
+                <Link
+                  to="/"
+                >
+                  <a
+                    href="/"
+                    onClick={[Function]}
+                  >
+                    <h2>
+                      POLITICO
+                    </h2>
+                  </a>
+                </Link>
+              </div>
+              <div
+                className="sign-btn"
+              >
+                <span
+                  className="home-btn"
+                >
+                  <Link
+                    to="/signup"
+                  >
+                    <a
+                      href="/signup"
+                      onClick={[Function]}
+                    >
+                      <Button
+                        className="btn"
+                        value="Sign Up"
+                      >
+                        <button
+                          className="btn"
+                        >
+                          Sign Up
+                        </button>
+                      </Button>
+                    </a>
+                  </Link>
+                  <Link
+                    to="login"
+                  >
+                    <a
+                      href="/login"
+                      onClick={[Function]}
+                    >
+                      <Button
+                        className="btn"
+                        value="Login"
+                      >
+                        <button
+                          className="btn"
+                        >
+                          Login
+                        </button>
+                      </Button>
+                    </a>
+                  </Link>
+                </span>
+              </div>
+            </header>
+          </div>
+        </NavBar>
+        <div
+          className="main"
+        >
+          <div
+            className="home"
+          >
+            <div
+              className="overlay"
+            >
+              <div
+                className="home-item-con"
+              >
+                <h1>
+                  POLITICO
+                </h1>
+                <article>
+                  <p>
+                    This is an application where users can vote for election. In addition you can apply as a candidate under a party and also cast votes for those who have shown interest for an office
+                  </p>
+                </article>
+                <div
+                  className="home-btn"
+                >
+                  <Link
+                    to="/signup"
+                  >
+                    <a
+                      href="/signup"
+                      onClick={[Function]}
+                    >
+                      <Button
+                        className="btn"
+                        value="Sign Up"
+                      >
+                        <button
+                          className="btn"
+                        >
+                          Sign Up
+                        </button>
+                      </Button>
+                    </a>
+                  </Link>
+                  <button
+                    className="btn"
+                  >
+                    <a
+                      href="UI/login.html"
+                    >
+                      Login
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Footer>
+          <footer>
+            <span>
+              Copyright@2019  @fantastic-genius (Andela Bootcamp Cycle41)
+            </span>
+          </footer>
+        </Footer>
+      </div>
+    </Home>
+  </Router>
+</BrowserRouter>
+`;

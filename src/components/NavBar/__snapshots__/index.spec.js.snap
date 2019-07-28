@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavBar /> Rendering of NavBar and children should render NavBar correctly in debug mode 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <NavBar>
+      <div>
+        <header>
+          <div
+            className="app-name"
+          >
+            <Link
+              to="/"
+            >
+              <a
+                href="/"
+                onClick={[Function]}
+              >
+                <h2>
+                  POLITICO
+                </h2>
+              </a>
+            </Link>
+          </div>
+          <div
+            className="sign-btn"
+          >
+            <span
+              className="home-btn"
+            >
+              <Link
+                to="/signup"
+              >
+                <a
+                  href="/signup"
+                  onClick={[Function]}
+                >
+                  <Button
+                    className="btn"
+                    value="Sign Up"
+                  >
+                    <button
+                      className="btn"
+                    >
+                      Sign Up
+                    </button>
+                  </Button>
+                </a>
+              </Link>
+              <Link
+                to="login"
+              >
+                <a
+                  href="/login"
+                  onClick={[Function]}
+                >
+                  <Button
+                    className="btn"
+                    value="Login"
+                  >
+                    <button
+                      className="btn"
+                    >
+                      Login
+                    </button>
+                  </Button>
+                </a>
+              </Link>
+            </span>
+          </div>
+        </header>
+      </div>
+    </NavBar>
+  </Router>
+</BrowserRouter>
+`;
+
+exports[`<NavBar /> Rendering should render NavBar correctly 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <NavBar />
+</Router>
+`;

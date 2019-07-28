@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InputForm /> Rendering should render Footer correctly in debug mode 1`] = `
+<div>
+  <label />
+  <input
+    debug={true}
+  />
+</div>
+`;

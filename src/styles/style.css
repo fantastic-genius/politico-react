@@ -7,3 +7,652 @@
 .title{
     color: red;
 }
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    margin: 0;
+}
+
+h2, h1{
+    margin:0;
+}
+a{
+    text-decoration: none;
+    color: #00bfff;
+}
+table,th,td{
+    border: 0.1rem solid #ffffff;
+    border-collapse: collapse;
+}
+
+table{
+    border-radius: 2rem;
+    overflow: hidden;
+    background-color: #dddd;
+    width: 90%;
+}
+
+header{
+    background-color:#00bfff;
+    width: 100%;
+    height: 8rem;
+    color: 	#0000ff;
+}
+
+.app-name h2{
+    font-size: 4rem;
+    padding: 1rem;
+}
+
+
+.item-box{
+    padding: 2rem;
+    background-color: #f2f2f2;
+    margin: 10rem 5%;
+}
+
+.item-box .header{
+    text-align: center;
+}
+
+input, select, textarea{
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 0.5rem;  
+    font-size: 1.6rem; 
+}
+
+textarea{
+    vertical-align: top;
+}
+
+label{
+    padding: 1.2rem 1.2rem 0.2rem 0;
+    display: inline-block;
+    width: 100%;
+    font-size: 1.6rem;
+    text-align: left;
+}
+
+input[type=submit], input[type=button]{
+    width: auto; 
+    
+}
+
+.btn-con{
+    text-align: center;
+}
+
+.btn{
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    cursor: pointer; 
+}
+
+.btn-success{
+    background-color: #01579b;
+    border: 1px solid #01579b;
+    color: #00bfff; 
+}
+
+.btn-danger{
+    background-color: #ff0000;
+    border: 1px solid #ff0000;
+}
+
+.btn-warning{
+    background-color: #e68a00;
+    border: 1px solid #e68a00;
+}
+
+.home-con {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.home{
+    background: url('../assets/images/election.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-con .main{
+    flex: 0 0 100vh;
+}
+
+.home-con footer{
+    width: 100vw;
+    flex: 0 0 5vh;
+    background-color:#666666;
+    color: 	#ffffff;
+    font-size: 1.0rem;
+    text-align: center;
+    padding: 0.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+}
+
+.home a{
+    color: #ffffff;
+}
+
+.overlay{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color:#000000;
+    opacity: 0.8;
+    color: #ffffff;
+}
+
+.home-item-con{
+    position: relative;
+    top: 30%;
+    text-align: center;
+}
+
+.home article{
+    width: 60%;
+    margin-left: 20%;
+}
+
+
+.home-item-con h1{
+    font-size: 5rem;
+}
+
+.home-con header{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+.home-con .app-name{
+    flex: 1;
+}
+
+.home-con .home-link{
+    flex: 0 0 20vw;
+}
+.home-con .sign-btn{
+    flex: 0 0 30vw;
+    padding-top: 1.5rem;
+    padding-right: 1rem;
+    text-align: right;
+}
+
+.home-link a{
+    color: #0000ff;
+}
+
+.home-link span{
+    margin: 2.5rem .5rem;
+    font-size: 2rem;
+}
+
+.home-btn{
+    display: inline;
+}
+
+.home-btn button{
+    background-color: #000000;
+    border: 1px solid #01579b;
+    padding: 1rem 2rem; 
+    margin-right: 1rem;   
+}
+
+.item-box a{
+    padding: 2rem;
+}
+
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: calc(100vh - 20vh);
+}
+
+.dashboard .main{
+    padding-top: 11rem;
+}
+
+.dashboard header h3{
+    padding-left: 2rem;
+    margin: 1.5rem .5rem;
+    font-size: 3rem;
+}
+
+.main aside{
+    background-color: #00bfff;
+    color: 	#0000ff;
+}
+
+.main aside a{
+    color: 	#0000ff;
+}
+
+.main aside a:hover, .main aside a:active{
+    color: 	#ffffff;
+}
+.main aside li:hover, .main aside li:active{
+    color: 	#ffffff;
+}
+
+
+.main article{
+    flex: 0 0 78vw;
+    text-align: -webkit-center;
+}
+
+.main .title-con{
+    text-align: -webkit-left;
+}
+
+.main article table{
+    padding: 2rem;
+    margin: 2rem;
+}
+
+.main article h3{
+    padding: 1.5rem 2rem 0;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+.main article td{
+    padding: 0.5rem;
+}
+
+.main article img{
+    width: 4rem;
+    height: 2rem;
+    border: .1rem solid #666666;
+}
+
+.dashboard header{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    position: fixed;
+    position: 0;
+}
+
+.dashboard .user{
+    padding: 1rem .5rem 0 0;
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    text-align: center;
+    border-bottom: 1px solid #0000ff;
+}
+
+.dashboard .user p{
+    margin: 0;
+    padding: .8rem 0;
+}
+
+.dashboard .photo img{
+    width: 8rem;
+    height: 8rem;
+    border: .1rem solid #01579b;
+    border-radius: 4rem;
+}
+
+.dashboard header button{
+    margin: .5rem 3rem;
+    padding: .5rem;
+    font-size: 1.2rem;
+    float: right;
+}
+
+.dashboard header button a{
+    color: #000000;
+}
+
+.dashboard footer{
+    flex: 0 0 5vh;
+    background-color:#666666;
+    color: 	#ffffff;
+    font-size: 1.0rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+aside ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+aside li{
+    padding: .8rem 0 0 1.2rem;
+}
+
+.menu{
+    padding: 0.5rem 2rem;
+}
+
+.triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 15px solid #555;
+}
+
+.arrow{
+    border: solid #0000ff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+  
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.to-right{
+    float: right;
+    margin-right: 1rem;
+}
+
+.hide{
+    display: none;
+}
+
+.main td button{
+    margin-right: 0.5rem;
+    padding: .5rem;
+    font-size: 1.2rem;
+}
+.main td button a{
+    color: #000000;
+}
+.main article form{
+    margin: 2rem;
+    text-align: left;
+}
+
+article p{
+    padding-left: 2rem;
+    margin: 1rem;
+}
+
+.apply-con .btn{
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+}
+
+.apply-con .btn a{
+    color: #000000;
+}
+
+.apply-con{
+    border: .1rem solid #ff9900;
+    border-radius: 1rem;
+    background-color: #ff9900;
+    color: #ffffff;
+    margin: 0 2rem;
+}
+
+.select-con{
+    padding-left: 2rem;
+}
+
+.dashboard .profile-pix img{
+    width: 10rem;
+    height: 10rem;
+    border: .1rem solid #01579b;
+    border-radius: 5rem;
+    margin: 2rem 4rem;
+}
+
+.dashboard .profile-pix{
+    text-align: center;
+}
+.profile-con{
+    width: 80%;
+    border: .1rem solid #01579b;
+    border-radius: 2rem;
+    margin: 3rem 2rem;
+    padding: 2rem;
+    text-align: left;
+}
+
+.dashboard .profile-con table{
+    border-radius: 2rem;
+    overflow: hidden;
+    margin: 0 0 2rem 0;
+    width: 100%;
+}
+
+.profile-con td{
+    background: #dddddd;
+    border-left: none;
+    border-bottom: 0.2rem solid white; 
+}
+.profile-con tr td:first-of-type{
+    border-right: 0.2rem solid #01579b;
+}
+
+.profile-con a{
+    color: #000000;
+}
+
+.change-psw-con{
+    background-color: #dddddd;
+}
+
+.profile-con .upload-con input[type="submit"]{
+    font-size: 1.6rem;
+    padding: .5rem;
+}
+
+.sign-btn span{
+    margin: 1.5rem .5rem;
+    font-size: 1rem;
+}
+
+.sign-btn button{
+    margin: 0.5rem 0;
+    padding: 1rem .5rem;
+    font-size: 1.2rem;
+}
+
+.alert-success{
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.alert-info{
+    padding: 1rem;
+    background-color: #2196F3;
+    color: white;
+}
+
+.alert-warning{
+    padding: 1rem;
+    background-color: #ff9800;
+    color: white;
+}
+
+.alert-danger{
+    padding: 1rem;
+    background-color: #f44336;
+    color: white;
+}
+
+.alert-msg{
+    margin-top: 1rem;
+}
+
+.close-btn{
+    margin-left: 1.5rem;
+    color: #ffffff;
+    font-weight: bold;
+    float: right;
+    font-size: 2.2rem;
+    line-height: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.toast-msg{
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.7rem;
+}
+
+
+@media screen and (min-width: 800px){
+    .container{
+        width: 100%;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        font-size: 1.6rem;
+    }
+
+    .item-box{
+        width: 60% ;
+        margin: 15rem 20%;
+    }
+
+    label{
+        max-width: 20%;
+    }
+
+    .profile-con label{
+        max-width: 25%;
+    }
+
+    input, select, textarea{
+        width: 70%;
+    }
+
+    input[type=submit], input[type=button]{
+        margin-left: 11%;   
+    }
+
+    .profile-con input[type=submit]{
+        margin-left: 22%;   
+    }
+
+    .main aside{
+        flex: 0 0 20vw;
+        background-color: #01579b;
+        color: 	#00bfff;
+        padding-top: 1rem;
+    }
+
+    .main{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .main aside a{
+        color: 	#00bfff;
+    }
+
+    aside li {
+        padding: 1.6rem 0 0 1.2rem;
+    }
+
+    .arrow{
+        border-color: #00bfff;
+    }
+
+    .main article td{
+        padding: 1.5rem;
+    }
+
+    .dashboard header{
+        display: flex;
+        flex-direction: row;
+        flex: 0 0 auto;
+    }
+
+    .dashboard .main{
+        padding-top: 8rem;
+    }
+
+    .dashboard .title{
+        margin: .8rem .5rem 0 0;
+        flex: 1;
+    }
+
+    .dashboard .user{
+        border-bottom: 1px solid #00bfff;
+        text-align: center;
+    }
+
+    .dashboard header button{
+        margin: 3rem 3rem;
+    }
+
+    .dashboard .photo img {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 5rem;
+    }
+
+    .profile-con .btn-con input{
+        margin-left: 0;
+    }
+
+    .profile-con .upload-con input[type="submit"]{
+        margin-left: 55%;
+    }
+
+    .home-link span{
+        margin: 2.5rem 2rem;
+        font-size: 2rem;
+    }
+    
+    .sign-btn span{
+        margin: 1.5rem 2rem;
+        font-size: 1rem;
+    }
+
+    .sign-btn button{
+        margin: 1rem .5rem;
+        padding: 1rem 1rem;
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 580px){
+
+    label{
+        width: 100%;
+    }
+}

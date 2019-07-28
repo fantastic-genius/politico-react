@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> Rendering should render Footer correctly in debug mode 1`] = `
+<footer>
+  <span>
+    Copyright@2019  @fantastic-genius (Andela Bootcamp Cycle41)
+  </span>
+</footer>
+`;
