@@ -12,7 +12,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.css'],
     alias: {
       '@': path.resolve(__dirname),
       '@src': path.resolve(__dirname, 'src'),
@@ -20,8 +20,9 @@ module.exports = {
       '@components': path.resolve(__dirname, 'src/components'),
       '@assets': path.resolve(__dirname, 'src/assets'),
       '@pages': path.resolve(__dirname, 'src/pages'),
-      '@actions': path.resolve(__dirname, 'src/actions'),
-      '@reducers': path.resolve(__dirname, 'src/reducers')
+      '@store': path.resolve(__dirname, 'src/store'),
+      '@actions': path.resolve(__dirname, 'src/store/actions'),
+      '@reducers': path.resolve(__dirname, 'src/store/reducers'),
     }
   },
   module: {

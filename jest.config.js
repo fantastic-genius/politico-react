@@ -8,8 +8,10 @@ module.exports = {
   testEnvironment: 'jsdom',
   moduleNameMapper: {
     '\\.(css|scss)$': '<rootDir>/__mocks__/styleMock.js',
-    '\\.(jpg|gif|ttf|otf|eot|svg|png)$': '<rootDir>/__mocks__/fileMock.js',
+    '\\.(jpg|jpeg|gif|ttf|otf|eot|svg|png)$': '<rootDir>/__mocks__/fileMock.js',
   },
-  moduleFileExtensions: [...defaults.moduleFileExtensions, 'scss', 'js']
+  moduleFileExtensions: [...defaults.moduleFileExtensions, 'scss', 'js', 'css'],
+  resolver: 'jest-webpack-resolver',
+  coveragePathIgnorePatterns: ['/src/utils/'],
 }
  

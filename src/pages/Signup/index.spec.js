@@ -1,27 +1,29 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { BrowserRouter as Router } from 'react-router-dom'
-import Home from './index';
+import store from '@src/store';
+import Signup from './index';
 
-describe('<Home />', () => {
+describe('<Signup />', () => {
   describe('Rendering', () => {
-    it('should render Home page correctly', () => {
+    it('should render signup page correctly', () => {
       const component = shallow(
         <Router>
-          <Home />
+          <Signup/>
         </Router>
       );
       expect(component).toMatchSnapshot();
     });
 
-    it('should render Home page correctly woth its children', () => {
+    it('should render signup page correctly woth its children', () => {
         const component = mount(
           <Router>
-            <Home />
+            <Signup store={ store }/>
           </Router>
         );
         expect(component).toMatchSnapshot();
-        expect(component.find('button')).toHaveLength(4)
+        expect(component.find('button')).toHaveLength(3);
+        expect(component.find('input')).toHaveLength(7);
     });
   });
 

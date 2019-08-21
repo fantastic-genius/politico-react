@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Toast /> Rendering should render Toast correctly 1`] = `
+<h3
+  className="toast-msg"
+/>
+`;

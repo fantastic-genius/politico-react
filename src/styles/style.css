@@ -528,6 +528,12 @@ article p{
     transition: 0.3s;
 }
 
+.toast-msg{
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.7rem;
+}
+
 
 @media screen and (min-width: 800px){
     .container{

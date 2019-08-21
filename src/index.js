@@ -1,13 +1,10 @@
 import '@styles/style.css';
+import '@styles/react-toastify.css';
 import React from 'react';
 import ReactDom from 'react-dom';
-import { Provider } from 'react-redux';
 import App from './App';
-import store from './store';
 
 ReactDom.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <App />,
   document.getElementById('app')
 )

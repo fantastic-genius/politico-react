@@ -1,6 +1,8 @@
 import React from 'react';
-import NavBar from '../../components/NavBar';
-import Footer from '../../components/Footer';
+import { Link } from 'react-router-dom';
+import NavBar from '@components/NavBar';
+import Footer from '@components/Footer';
+import Button from '@components/Button';
 
 const Home = () => (
     <div className="container home-con" >
@@ -17,7 +19,9 @@ const Home = () => (
                   </p>
               </article>
               <div className="home-btn">
-                  <button className="btn"><a href="UI/signup.html">Sign Up</a></button>
+                  <Link to='/signup'>
+                    <Button className="btn" value='Sign Up'/>
+                  </Link>
                   <button className="btn"><a href="UI/login.html">Login</a></button>
               </div>
             </div>
