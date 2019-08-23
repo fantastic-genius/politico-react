@@ -23,4 +23,18 @@ const setUser = () => dispatch => {
   }
 }
 
-export { signup, setUser };
+const signin = (values) => async (dispatch) => {
+  dispatch({type: 'SIGNIN'});
+
+  try{
+    const { data } = await axiosCall({path: '/api/v1/auth/login', payload: values, method: 'post'});
+    saveToLocalStorage(data[0]);
+    dispatch({type: 'SIGNIN_FULFILLED', payload: data[0]})
+  } catch (err) {
+    const { response } = err;
+    const error = response.data || response;
+    dispatch({type: 'SIGNIN_REJECTED', payload: error})
+  }
+};
+
+export { signup, setUser, signin };

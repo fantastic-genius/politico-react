@@ -32,12 +32,36 @@ const reducer = (state=initialValues, action) => {
     case 'SIGNUP_CLEAN_UP':
       return {
         ...initialValues
-      }
+      };
     case 'SET_USER':
       return {
         ...state,
         user: action.payload.user,
         isAuthenticated: action.payload.isAuthenticated
+      };
+    case 'SIGNIN':
+      return {
+        ...state,
+        fetching: true
+      };
+    case 'SIGNIN_REJECTED':
+        return {
+          ...state,
+          fetching: false,
+          error: action.payload.error
+        };
+    case 'SIGNIN_FULFILLED':
+      return {
+        ...state,
+        fetching: false,
+        fetched: true,
+        user: action.payload.user,
+        isAuthenticated: true,
+        token: action.payload.token
+      };
+    case 'SIGNIN_CLEAN_UP':
+      return {
+        ...initialValues
       }
     default:
       return state;

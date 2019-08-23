@@ -50,6 +50,10 @@ header{
     padding: 1rem;
 }
 
+.app-name a{
+    color: #0000ff;;
+}
+
 
 .item-box{
     padding: 2rem;
