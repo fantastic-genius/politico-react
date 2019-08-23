@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import Home from '@pages/Home';
 import Signup from '@pages/Signup';
+import Signin from '@pages/Signin';
 import useSetUser from '@store/hooks';
 import store from '@src/store';
 
@@ -13,6 +14,7 @@ const App = () => {
     <Fragment>
       <Route exact path="/" component={Home} />
       <Route path="/signup" component={Signup} />
+      <Route path="/login" component={Signin} />
       <ToastContainer autoClose={6000} position="top-center" hideProgressBar rtl={false} pauseOnHover />
     </Fragment>
   )

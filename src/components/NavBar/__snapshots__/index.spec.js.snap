@@ -25,72 +25,70 @@ exports[`<NavBar /> Rendering of NavBar and children should render NavBar correc
     }
   >
     <NavBar>
-      <div>
-        <header>
-          <div
-            className="app-name"
+      <header>
+        <div
+          className="app-name"
+        >
+          <Link
+            to="/"
+          >
+            <a
+              href="/"
+              onClick={[Function]}
+            >
+              <h2>
+                POLITICO
+              </h2>
+            </a>
+          </Link>
+        </div>
+        <div
+          className="sign-btn"
+        >
+          <span
+            className="home-btn"
           >
             <Link
-              to="/"
+              to="/signup"
             >
               <a
-                href="/"
+                href="/signup"
                 onClick={[Function]}
               >
-                <h2>
-                  POLITICO
-                </h2>
+                <Button
+                  className="btn"
+                  value="Sign Up"
+                >
+                  <button
+                    className="btn"
+                  >
+                    Sign Up
+                  </button>
+                </Button>
               </a>
             </Link>
-          </div>
-          <div
-            className="sign-btn"
-          >
-            <span
-              className="home-btn"
+            <Link
+              to="/login"
             >
-              <Link
-                to="/signup"
+              <a
+                href="/login"
+                onClick={[Function]}
               >
-                <a
-                  href="/signup"
-                  onClick={[Function]}
+                <Button
+                  className="btn"
+                  value="Login"
                 >
-                  <Button
+                  <button
                     className="btn"
-                    value="Sign Up"
                   >
-                    <button
-                      className="btn"
-                    >
-                      Sign Up
-                    </button>
-                  </Button>
-                </a>
-              </Link>
-              <Link
-                to="login"
-              >
-                <a
-                  href="/login"
-                  onClick={[Function]}
-                >
-                  <Button
-                    className="btn"
-                    value="Login"
-                  >
-                    <button
-                      className="btn"
-                    >
-                      Login
-                    </button>
-                  </Button>
-                </a>
-              </Link>
-            </span>
-          </div>
-        </header>
-      </div>
+                    Login
+                  </button>
+                </Button>
+              </a>
+            </Link>
+          </span>
+        </div>
+      </header>
     </NavBar>
   </Router>
 </BrowserRouter>

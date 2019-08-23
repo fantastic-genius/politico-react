@@ -1,4 +1,4 @@
-import signupReducer from './index';
+import authReducer from './index';
 
 const initialState = {
   fetching: false,
@@ -19,11 +19,11 @@ const user = {
 
 describe('Signup Reducer', () => {
   it('Should return the initial state', () => {
-    expect(signupReducer(undefined, {})).toEqual(initialState);
+    expect(authReducer (undefined, {})).toEqual(initialState);
   });
 
   it('Should handle SIGNUP', () => {
-    expect(signupReducer(
+    expect(authReducer (
       initialState, {
         type: 'SIGNUP'
       }
@@ -38,7 +38,7 @@ describe('Signup Reducer', () => {
       user,
       token: 'hcjvncljnvjfhhkjdcjdcbb'
     }
-    expect(signupReducer(
+    expect(authReducer (
       initialState, {
         type: 'SIGNUP_FULFILLED',
         payload
@@ -55,7 +55,7 @@ describe('Signup Reducer', () => {
     const payload = {
       error: 'Something went wrong'
     }
-    expect(signupReducer(
+    expect(authReducer (
       initialState, {
         type: 'SIGNUP_REJECTED',
         payload
@@ -68,7 +68,7 @@ describe('Signup Reducer', () => {
   });
 
   it('Should handle SIGNUP_CLEAN_UP', () => {
-    expect(signupReducer(
+    expect(authReducer (
       initialState, {
         type: 'SIGNUP_CLEAN_UP'
       }
@@ -82,7 +82,7 @@ describe('Signup Reducer', () => {
       user,
       isAuthenticated: true,
     }
-    expect(signupReducer(
+    expect(authReducer (
       initialState, {
         type: 'SET_USER',
         payload
@@ -90,6 +90,61 @@ describe('Signup Reducer', () => {
     )).toEqual({
       ...initialState,
       ...payload
+    });
+  });
+
+  it('Should handle SIGNIN', () => {
+    expect(authReducer (
+      initialState, {
+        type: 'SIGNIN'
+      }
+    )).toEqual({
+      ...initialState,
+      fetching: true
+    });
+  });
+
+  it('Should handle SIGNIN_FULFILLED', () => {
+    const payload = {
+      user,
+      token: 'hcjvncljnvjfhhkjdcjdcbb'
+    }
+    expect(authReducer (
+      initialState, {
+        type: 'SIGNIN_FULFILLED',
+        payload
+      }
+    )).toEqual({
+      ...initialState,
+      fetched: true,
+      isAuthenticated: true,
+      ...payload
+    });
+  });
+
+  it('Should handle SIGNIN_REJECTED', () => {
+    const payload = {
+      error: 'Something went wrong'
+    }
+    expect(authReducer (
+      initialState, {
+        type: 'SIGNIN_REJECTED',
+        payload
+      }
+    )).toEqual({
+      ...initialState,
+      error: 'Something went wrong',
+      fetching: false,
+    });
+  });
+
+  it('Should handle SIGNIN_CLEAN_UP', () => {
+    expect(authReducer (
+      initialState, {
+        type: 'SIGNIN_CLEAN_UP'
+      }
+    )).toEqual({
+      ...initialState
     });
   });
 });

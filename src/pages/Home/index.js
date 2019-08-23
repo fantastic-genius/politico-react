@@ -22,7 +22,9 @@ const Home = () => (
                   <Link to='/signup'>
                     <Button className="btn" value='Sign Up'/>
                   </Link>
-                  <button className="btn"><a href="UI/login.html">Login</a></button>
+                  <Link to='/login'>
+                    <Button className="btn" value='Login'/>
+                  </Link>
               </div>
             </div>
           </div> 
