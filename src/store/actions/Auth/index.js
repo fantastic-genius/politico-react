@@ -9,7 +9,7 @@ const signup = (values) => async (dispatch) => {
     dispatch({type: 'SIGNUP_FULFILLED', payload: data[0]})
   } catch (err) {
     const { response } = err;
-    const error = response.data || response;
+    const error = response.data.error || response.data || response;
     dispatch({type: 'SIGNUP_REJECTED', payload: error})
   }
 };
@@ -34,9 +34,17 @@ const signin = (values) => async (dispatch) => {
     dispatch({type: 'SIGNIN_FULFILLED', payload: data[0]})
   } catch (err) {
     const { response } = err;
-    const error = response.data || response;
+    const error = response.data.error || response.data || response;
     dispatch({type: 'SIGNIN_REJECTED', payload: error})
   }
 };
 
-export { signup, setUser, signin };
+const signout = () => dispatch => {
+  dispatch({type: 'SIGNOUT'});
+  localStorage.clear()
+  dispatch({type: 'SIGNOUT_SUCCESSFUL'});
+  dispatch(setUser())
+
+}
+
+export { signup, setUser, signin, signout };

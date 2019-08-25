@@ -1,72 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Signup /> Rendering should render signup page correctly 1`] = `
-<Router
-  history={
+<ContextProvider
+  value={
     Object {
-      "action": "POP",
-      "block": [Function],
-      "createHref": [Function],
-      "go": [Function],
-      "goBack": [Function],
-      "goForward": [Function],
-      "length": 1,
-      "listen": [Function],
-      "location": Object {
-        "hash": "",
-        "pathname": "/",
-        "search": "",
-        "state": undefined,
+      "store": Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
       },
-      "push": [Function],
-      "replace": [Function],
-    }
-  }
->
-  <Connect(Signup) />
-</Router>
-`;
-
-exports[`<Signup /> Rendering should render signup page correctly with its children 1`] = `
-<BrowserRouter>
-  <Router
-    history={
-      Object {
-        "action": "POP",
-        "block": [Function],
-        "createHref": [Function],
-        "go": [Function],
-        "goBack": [Function],
-        "goForward": [Function],
-        "length": 1,
-        "listen": [Function],
-        "location": Object {
-          "hash": "",
-          "pathname": "/",
-          "search": "",
-          "state": undefined,
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "clear": [Function],
+          "get": [Function],
+          "notify": [Function],
+          "subscribe": [Function],
         },
-        "push": [Function],
-        "replace": [Function],
-      }
-    }
-  >
-    <Connect(Signup)
-      store={
-        Object {
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
           "dispatch": [Function],
           "getState": [Function],
           "replaceReducer": [Function],
           "subscribe": [Function],
           Symbol(observable): [Function],
+        },
+        "unsubscribe": [Function],
+      },
+    }
+  }
+>
+  <BrowserRouter>
+    <Connect(Signup) />
+  </BrowserRouter>
+</ContextProvider>
+`;
+
+exports[`<Signup /> Rendering should render signup page correctly with its children 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
         }
       }
     >
-      <Signup
-        error={null}
-        fetched={false}
-        fetching={false}
-        signupAction={[Function]}
+      <Connect(Signup)
         store={
           Object {
             "dispatch": [Function],
@@ -76,305 +84,329 @@ exports[`<Signup /> Rendering should render signup page correctly with its child
             Symbol(observable): [Function],
           }
         }
-        user={Object {}}
       >
-        <div
-          className="container home-con"
+        <Signup
+          error={null}
+          fetched={false}
+          fetching={false}
+          signupAction={[Function]}
+          store={
+            Object {
+              "dispatch": [Function],
+              "getState": [Function],
+              "replaceReducer": [Function],
+              "subscribe": [Function],
+              Symbol(observable): [Function],
+            }
+          }
+          user={Object {}}
         >
-          <NavBar>
-            <header>
-              <div
-                className="app-name"
-              >
-                <Link
-                  to="/"
-                >
-                  <a
-                    href="/"
-                    onClick={[Function]}
-                  >
-                    <h2>
-                      POLITICO
-                    </h2>
-                  </a>
-                </Link>
-              </div>
-              <div
-                className="sign-btn"
-              >
-                <span
-                  className="home-btn"
-                >
-                  <Link
-                    to="/signup"
-                  >
-                    <a
-                      href="/signup"
-                      onClick={[Function]}
-                    >
-                      <Button
-                        className="btn"
-                        value="Sign Up"
-                      >
-                        <button
-                          className="btn"
-                        >
-                          Sign Up
-                        </button>
-                      </Button>
-                    </a>
-                  </Link>
-                  <Link
-                    to="/login"
-                  >
-                    <a
-                      href="/login"
-                      onClick={[Function]}
-                    >
-                      <Button
-                        className="btn"
-                        value="Login"
-                      >
-                        <button
-                          className="btn"
-                        >
-                          Login
-                        </button>
-                      </Button>
-                    </a>
-                  </Link>
-                </span>
-              </div>
-            </header>
-          </NavBar>
           <div
-            className="item-box"
+            className="container home-con"
           >
+            <Connect(NavBar)>
+              <NavBar
+                isAuthenticated={false}
+              >
+                <header>
+                  <div
+                    className="app-name"
+                  >
+                    <Link
+                      to="/"
+                    >
+                      <a
+                        href="/"
+                        onClick={[Function]}
+                      >
+                        <h2>
+                          POLITICO
+                        </h2>
+                      </a>
+                    </Link>
+                  </div>
+                  <div
+                    className="sign-btn"
+                  >
+                    <span
+                      className="home-btn"
+                    >
+                      <span
+                        className="home-btn"
+                      >
+                        <Link
+                          to="/signup"
+                        >
+                          <a
+                            href="/signup"
+                            onClick={[Function]}
+                          >
+                            <Button
+                              className="btn"
+                              value="Sign Up"
+                            >
+                              <button
+                                className="btn"
+                              >
+                                Sign Up
+                              </button>
+                            </Button>
+                          </a>
+                        </Link>
+                        <Link
+                          to="/login"
+                        >
+                          <a
+                            href="/login"
+                            onClick={[Function]}
+                          >
+                            <Button
+                              className="btn"
+                              value="Login"
+                            >
+                              <button
+                                className="btn"
+                              >
+                                Login
+                              </button>
+                            </Button>
+                          </a>
+                        </Link>
+                      </span>
+                    </span>
+                  </div>
+                </header>
+              </NavBar>
+            </Connect(NavBar)>
             <div
-              className="header"
+              className="item-box"
             >
-              <h2>
-                Sign Up
-              </h2>
-            </div>
-            <form
-              id="signup-form"
-              onSubmit={[Function]}
-            >
-              <InputForm
-                id="firstname"
-                labelName="First Name"
-                name="firstname"
-                onChange={[Function]}
-                pattern="^[\\\\w]{3,20}$"
-                placeholder="First Name"
-                required={true}
-                title="first name is required and must be more than 3 character"
-                type="text"
-              >
-                <div>
-                  <label
-                    htmlFor="firstname"
-                  >
-                    First Name
-                  </label>
-                  <input
-                    id="firstname"
-                    name="firstname"
-                    onChange={[Function]}
-                    pattern="^[\\\\w]{3,20}$"
-                    placeholder="First Name"
-                    required={true}
-                    title="first name is required and must be more than 3 character"
-                    type="text"
-                  />
-                </div>
-              </InputForm>
-              <InputForm
-                id="othername"
-                labelName="Other Name"
-                name="othername"
-                onChange={[Function]}
-                placeholder="Other Name"
-                required={true}
-                type="text"
-              >
-                <div>
-                  <label
-                    htmlFor="othername"
-                  >
-                    Other Name
-                  </label>
-                  <input
-                    id="othername"
-                    name="othername"
-                    onChange={[Function]}
-                    placeholder="Other Name"
-                    required={true}
-                    type="text"
-                  />
-                </div>
-              </InputForm>
-              <InputForm
-                id="lastname"
-                labelName="Last Name"
-                name="lastname"
-                onChange={[Function]}
-                pattern="^[\\\\w]{3,20}$"
-                placeholder="Last Name"
-                required={true}
-                title="first name is required and must be more than 3 character"
-                type="text"
-              >
-                <div>
-                  <label
-                    htmlFor="lastname"
-                  >
-                    Last Name
-                  </label>
-                  <input
-                    id="lastname"
-                    name="lastname"
-                    onChange={[Function]}
-                    pattern="^[\\\\w]{3,20}$"
-                    placeholder="Last Name"
-                    required={true}
-                    title="first name is required and must be more than 3 character"
-                    type="text"
-                  />
-                </div>
-              </InputForm>
-              <InputForm
-                id="email"
-                labelName="Email"
-                name="email"
-                onChange={[Function]}
-                pattern="^[\\\\w.]+@[\\\\w]{2,20}.[a-z]{2,10}$"
-                placeholder="Email"
-                required={true}
-                title="must be a valid email"
-                type="email"
-              >
-                <div>
-                  <label
-                    htmlFor="email"
-                  >
-                    Email
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    onChange={[Function]}
-                    pattern="^[\\\\w.]+@[\\\\w]{2,20}.[a-z]{2,10}$"
-                    placeholder="Email"
-                    required={true}
-                    title="must be a valid email"
-                    type="email"
-                  />
-                </div>
-              </InputForm>
-              <InputForm
-                id="phone"
-                labelName="Phone Number"
-                name="phoneNumber"
-                onChange={[Function]}
-                placeholder="08012345678"
-                required={true}
-                type="text"
-              >
-                <div>
-                  <label
-                    htmlFor="phoneNumber"
-                  >
-                    Phone Number
-                  </label>
-                  <input
-                    id="phone"
-                    name="phoneNumber"
-                    onChange={[Function]}
-                    placeholder="08012345678"
-                    required={true}
-                    type="text"
-                  />
-                </div>
-              </InputForm>
-              <InputForm
-                autoComplete="off"
-                id="password"
-                labelName="Password"
-                name="password"
-                onChange={[Function]}
-                pattern="^[\\\\w]{8,20}$"
-                required={true}
-                title="password is required and must be more than 8 character"
-                type="password"
-              >
-                <div>
-                  <label
-                    htmlFor="password"
-                  >
-                    Password
-                  </label>
-                  <input
-                    autoComplete="off"
-                    id="password"
-                    name="password"
-                    onChange={[Function]}
-                    pattern="^[\\\\w]{8,20}$"
-                    required={true}
-                    title="password is required and must be more than 8 character"
-                    type="password"
-                  />
-                </div>
-              </InputForm>
-              <InputForm
-                autoComplete="off"
-                id="password-conf"
-                labelName="Confirm Password"
-                name="passwordConf"
-                onChange={[Function]}
-                required={true}
-                type="password"
-              >
-                <div>
-                  <label
-                    htmlFor="passwordConf"
-                  >
-                    Confirm Password
-                  </label>
-                  <input
-                    autoComplete="off"
-                    id="password-conf"
-                    name="passwordConf"
-                    onChange={[Function]}
-                    required={true}
-                    type="password"
-                  />
-                </div>
-              </InputForm>
               <div
-                className="btn-con"
+                className="header"
               >
-                <Button
-                  className="btn btn-success"
-                  id="signup"
-                  type="submit"
-                  value="Sign Up"
+                <h2>
+                  Sign Up
+                </h2>
+              </div>
+              <form
+                id="signup-form"
+                onSubmit={[Function]}
+              >
+                <InputForm
+                  id="firstname"
+                  labelName="First Name"
+                  name="firstname"
+                  onChange={[Function]}
+                  pattern="^[\\\\w]{3,20}$"
+                  placeholder="First Name"
+                  required={true}
+                  title="first name is required and must be more than 3 character"
+                  type="text"
                 >
-                  <button
+                  <div>
+                    <label
+                      htmlFor="firstname"
+                    >
+                      First Name
+                    </label>
+                    <input
+                      id="firstname"
+                      name="firstname"
+                      onChange={[Function]}
+                      pattern="^[\\\\w]{3,20}$"
+                      placeholder="First Name"
+                      required={true}
+                      title="first name is required and must be more than 3 character"
+                      type="text"
+                    />
+                  </div>
+                </InputForm>
+                <InputForm
+                  id="othername"
+                  labelName="Other Name"
+                  name="othername"
+                  onChange={[Function]}
+                  placeholder="Other Name"
+                  required={true}
+                  type="text"
+                >
+                  <div>
+                    <label
+                      htmlFor="othername"
+                    >
+                      Other Name
+                    </label>
+                    <input
+                      id="othername"
+                      name="othername"
+                      onChange={[Function]}
+                      placeholder="Other Name"
+                      required={true}
+                      type="text"
+                    />
+                  </div>
+                </InputForm>
+                <InputForm
+                  id="lastname"
+                  labelName="Last Name"
+                  name="lastname"
+                  onChange={[Function]}
+                  pattern="^[\\\\w]{3,20}$"
+                  placeholder="Last Name"
+                  required={true}
+                  title="first name is required and must be more than 3 character"
+                  type="text"
+                >
+                  <div>
+                    <label
+                      htmlFor="lastname"
+                    >
+                      Last Name
+                    </label>
+                    <input
+                      id="lastname"
+                      name="lastname"
+                      onChange={[Function]}
+                      pattern="^[\\\\w]{3,20}$"
+                      placeholder="Last Name"
+                      required={true}
+                      title="first name is required and must be more than 3 character"
+                      type="text"
+                    />
+                  </div>
+                </InputForm>
+                <InputForm
+                  id="email"
+                  labelName="Email"
+                  name="email"
+                  onChange={[Function]}
+                  pattern="^[\\\\w.]+@[\\\\w]{2,20}.[a-z]{2,10}$"
+                  placeholder="Email"
+                  required={true}
+                  title="must be a valid email"
+                  type="email"
+                >
+                  <div>
+                    <label
+                      htmlFor="email"
+                    >
+                      Email
+                    </label>
+                    <input
+                      id="email"
+                      name="email"
+                      onChange={[Function]}
+                      pattern="^[\\\\w.]+@[\\\\w]{2,20}.[a-z]{2,10}$"
+                      placeholder="Email"
+                      required={true}
+                      title="must be a valid email"
+                      type="email"
+                    />
+                  </div>
+                </InputForm>
+                <InputForm
+                  id="phone"
+                  labelName="Phone Number"
+                  name="phoneNumber"
+                  onChange={[Function]}
+                  placeholder="08012345678"
+                  required={true}
+                  type="text"
+                >
+                  <div>
+                    <label
+                      htmlFor="phoneNumber"
+                    >
+                      Phone Number
+                    </label>
+                    <input
+                      id="phone"
+                      name="phoneNumber"
+                      onChange={[Function]}
+                      placeholder="08012345678"
+                      required={true}
+                      type="text"
+                    />
+                  </div>
+                </InputForm>
+                <InputForm
+                  autoComplete="off"
+                  id="password"
+                  labelName="Password"
+                  name="password"
+                  onChange={[Function]}
+                  pattern="^[\\\\w]{8,20}$"
+                  required={true}
+                  title="password is required and must be more than 8 character"
+                  type="password"
+                >
+                  <div>
+                    <label
+                      htmlFor="password"
+                    >
+                      Password
+                    </label>
+                    <input
+                      autoComplete="off"
+                      id="password"
+                      name="password"
+                      onChange={[Function]}
+                      pattern="^[\\\\w]{8,20}$"
+                      required={true}
+                      title="password is required and must be more than 8 character"
+                      type="password"
+                    />
+                  </div>
+                </InputForm>
+                <InputForm
+                  autoComplete="off"
+                  id="password-conf"
+                  labelName="Confirm Password"
+                  name="passwordConf"
+                  onChange={[Function]}
+                  required={true}
+                  type="password"
+                >
+                  <div>
+                    <label
+                      htmlFor="passwordConf"
+                    >
+                      Confirm Password
+                    </label>
+                    <input
+                      autoComplete="off"
+                      id="password-conf"
+                      name="passwordConf"
+                      onChange={[Function]}
+                      required={true}
+                      type="password"
+                    />
+                  </div>
+                </InputForm>
+                <div
+                  className="btn-con"
+                >
+                  <Button
                     className="btn btn-success"
                     id="signup"
                     type="submit"
+                    value="Sign Up"
                   >
-                    Sign Up
-                  </button>
-                </Button>
-              </div>
-            </form>
+                    <button
+                      className="btn btn-success"
+                      id="signup"
+                      type="submit"
+                    >
+                      Sign Up
+                    </button>
+                  </Button>
+                </div>
+              </form>
+            </div>
           </div>
-        </div>
-      </Signup>
-    </Connect(Signup)>
-  </Router>
-</BrowserRouter>
+        </Signup>
+      </Connect(Signup)>
+    </Router>
+  </BrowserRouter>
+</Provider>
 `;

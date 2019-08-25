@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from  'react-redux';
 import DashboardContainer from '@components/DashboardContainer';
-import { getVotedOffices, getOfficeCandidates, voteCandidate, cleanUp } from '@actions/Vote';
+import { getVotedCandidates, getOfficeCandidates, voteCandidate, cleanUp } from '@actions/Vote';
 import getOffices from '@actions/Office';
 import CandidateRow from '@components/CandidateRow';
 import { callToast } from '@components/Toast'
@@ -11,7 +11,7 @@ const Vote = (props) => {
   const {
     voted,
     offices,
-    votedOffices,
+    votedCandidates,
     candidates,
     candidatesLoading,
     candidatesLoaded,
@@ -22,10 +22,10 @@ const Vote = (props) => {
   const [officeId, setOfficeId] = useState(null);
   const loadOffices = offices ? 
       offices.map(office => {
-        if(votedOffices && votedOffices.length > 0){
+        if(votedCandidates && votedCandidates.length > 0){
             let isOfficeVoted = false
-            votedOffices.forEach(votedOffice => {
-                if(votedOffice.officeid === office.id){
+            votedCandidates.forEach(votedCandidate => {
+                if(votedCandidate.officeid === office.id){
                   isOfficeVoted = true
                 }
             })
@@ -52,7 +52,7 @@ const Vote = (props) => {
   const loadCandidates = candidatesLoaded && candidates.length ?
     candidates.map(candidate => (
       <CandidateRow key={candidate.id} candidate={candidate} onVote={onVote} />
-      )) : (<tr><td></td><td>No Candidate for this office</td></tr>);
+      )) : (<tr></tr>);
   
   const onChange = (e) => {
     e.persist();
@@ -65,7 +65,7 @@ const Vote = (props) => {
     props.cleanUp();
     if(userId){
       /* istanbul ignore next */
-      props.getVotedOffices(userId, token)
+      props.getVotedCandidates(userId, token)
       props.getOffices(token);
     }
 
@@ -111,6 +111,7 @@ const Vote = (props) => {
             </tbody>
           </table>
           }
+          {!candidates.length && !candidatesLoading ? (<h4>No Candidate for this office</h4>) : ''}
         </div>    
       </article>
     </DashboardContainer>
@@ -121,7 +122,7 @@ const mapStateToProps = state => ({
   voted: state.vote.voted,
   candidatesLoading: state.vote.candidatesLoading,
   candidatesLoaded: state.vote.candidatesLoaded,
-  votedOffices: state.vote.offices,
+  votedCandidates: state.vote.votedCandidates,
   candidates: state.vote.candidates,
   error: state.vote.error,
   token: state.auth.token,
@@ -130,5 +131,5 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, {
-  getVotedOffices, getOfficeCandidates, voteCandidate, getOffices, cleanUp
+  getVotedCandidates, getOfficeCandidates, voteCandidate, getOffices, cleanUp
 })(Vote);

@@ -2,13 +2,13 @@ import voteReducer from './index';
 import * as types from '../../actions/actionTypes';
 
 const initialState = {
-  officesLoading: false,
-  officesLoaded: false,
+  votedCandidatesLoading: false,
+  votedCandidatesLoaded: false,
   candidatesLoading: false,
   candidatesLoaded: false,
   voting: false,
   voted: false,
-  offices: [],
+  votedCandidates: [],
   candidates: [],
   error: null
 }
@@ -18,19 +18,19 @@ describe('Vote Reducer', () => {
     expect(voteReducer(undefined, {})).toEqual(initialState);
   });
 
-  it('Should handle GET_VOTED_OFFICES_PENDING', () => {
+  it('Should handle GET_VOTED_CANDIDATES_PENDING', () => {
     expect(voteReducer(
       initialState, {
-        type: types.GET_VOTED_OFFICES_PENDING
+        type: types.GET_VOTED_CANDIDATES_PENDING
       }
     )).toEqual({
       ...initialState,
-      officesLoading: true
+      votedCandidatesLoading: true
     });
   });
 
-  it('Should handle GET_VOTED_OFFICES_FULFILLED', () => {
-    const offices = [
+  it('Should handle GET_VOTED_CANDIDATES_FULFILLED', () => {
+    const votedCandidates = [
       {
         id: '1',
         name: 'Governor',
@@ -39,27 +39,27 @@ describe('Vote Reducer', () => {
 
     expect(voteReducer(
       initialState, {
-        type: types.GET_VOTED_OFFICES_FULFILLED,
-        payload: offices
+        type: types.GET_VOTED_CANDIDATES_FULFILLED,
+        payload: votedCandidates
       }
     )).toEqual({
       ...initialState,
-      officesLoading: false,
-      officesLoaded: true,
-      offices
+      votedCandidatesLoading: false,
+      votedCandidatesLoaded: true,
+      votedCandidates
     });
   });
 
-  it('Should handle GET_VOTED_OFFICES_REJECTED', () => {
+  it('Should handle GET_VOTED_CANDIDATES_REJECTED', () => {
     expect(voteReducer(
       initialState, {
-        type: types.GET_VOTED_OFFICES_REJECTED,
+        type: types.GET_VOTED_CANDIDATES_REJECTED,
         payload: 'Something went wrong'
       }
     )).toEqual({
       ...initialState,
       error: 'Something went wrong',
-      officesLoading: false,
+      votedCandidatesLoading: false,
     });
   });
 

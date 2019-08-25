@@ -1,201 +1,241 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Home /> Rendering should render Home page correctly 1`] = `
-<Router
-  history={
+<ContextProvider
+  value={
     Object {
-      "action": "POP",
-      "block": [Function],
-      "createHref": [Function],
-      "go": [Function],
-      "goBack": [Function],
-      "goForward": [Function],
-      "length": 1,
-      "listen": [Function],
-      "location": Object {
-        "hash": "",
-        "pathname": "/",
-        "search": "",
-        "state": undefined,
+      "store": Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
       },
-      "push": [Function],
-      "replace": [Function],
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "clear": [Function],
+          "get": [Function],
+          "notify": [Function],
+          "subscribe": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        },
+        "unsubscribe": [Function],
+      },
     }
   }
 >
-  <Home />
-</Router>
+  <BrowserRouter>
+    <Connect(Home)
+      isAuthenticated={false}
+    />
+  </BrowserRouter>
+</ContextProvider>
 `;
 
 exports[`<Home /> Rendering should render Home page correctly woth its children 1`] = `
-<BrowserRouter>
-  <Router
-    history={
-      Object {
-        "action": "POP",
-        "block": [Function],
-        "createHref": [Function],
-        "go": [Function],
-        "goBack": [Function],
-        "goForward": [Function],
-        "length": 1,
-        "listen": [Function],
-        "location": Object {
-          "hash": "",
-          "pathname": "/",
-          "search": "",
-          "state": undefined,
-        },
-        "push": [Function],
-        "replace": [Function],
-      }
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
     }
-  >
-    <Home>
-      <div
-        className="container home-con"
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(Home)
+        isAuthenticated={false}
       >
-        <NavBar>
-          <header>
-            <div
-              className="app-name"
-            >
-              <Link
-                to="/"
-              >
-                <a
-                  href="/"
-                  onClick={[Function]}
-                >
-                  <h2>
-                    POLITICO
-                  </h2>
-                </a>
-              </Link>
-            </div>
-            <div
-              className="sign-btn"
-            >
-              <span
-                className="home-btn"
-              >
-                <Link
-                  to="/signup"
-                >
-                  <a
-                    href="/signup"
-                    onClick={[Function]}
-                  >
-                    <Button
-                      className="btn"
-                      value="Sign Up"
-                    >
-                      <button
-                        className="btn"
-                      >
-                        Sign Up
-                      </button>
-                    </Button>
-                  </a>
-                </Link>
-                <Link
-                  to="/login"
-                >
-                  <a
-                    href="/login"
-                    onClick={[Function]}
-                  >
-                    <Button
-                      className="btn"
-                      value="Login"
-                    >
-                      <button
-                        className="btn"
-                      >
-                        Login
-                      </button>
-                    </Button>
-                  </a>
-                </Link>
-              </span>
-            </div>
-          </header>
-        </NavBar>
-        <div
-          className="main"
+        <Home
+          isAuthenticated={false}
         >
           <div
-            className="home"
+            className="container home-con"
           >
+            <Connect(NavBar)>
+              <NavBar
+                isAuthenticated={false}
+              >
+                <header>
+                  <div
+                    className="app-name"
+                  >
+                    <Link
+                      to="/"
+                    >
+                      <a
+                        href="/"
+                        onClick={[Function]}
+                      >
+                        <h2>
+                          POLITICO
+                        </h2>
+                      </a>
+                    </Link>
+                  </div>
+                  <div
+                    className="sign-btn"
+                  >
+                    <span
+                      className="home-btn"
+                    >
+                      <span
+                        className="home-btn"
+                      >
+                        <Link
+                          to="/signup"
+                        >
+                          <a
+                            href="/signup"
+                            onClick={[Function]}
+                          >
+                            <Button
+                              className="btn"
+                              value="Sign Up"
+                            >
+                              <button
+                                className="btn"
+                              >
+                                Sign Up
+                              </button>
+                            </Button>
+                          </a>
+                        </Link>
+                        <Link
+                          to="/login"
+                        >
+                          <a
+                            href="/login"
+                            onClick={[Function]}
+                          >
+                            <Button
+                              className="btn"
+                              value="Login"
+                            >
+                              <button
+                                className="btn"
+                              >
+                                Login
+                              </button>
+                            </Button>
+                          </a>
+                        </Link>
+                      </span>
+                    </span>
+                  </div>
+                </header>
+              </NavBar>
+            </Connect(NavBar)>
             <div
-              className="overlay"
+              className="main"
             >
               <div
-                className="home-item-con"
+                className="home"
               >
-                <h1>
-                  POLITICO
-                </h1>
-                <article>
-                  <p>
-                    This is an application where users can vote for election. In addition you can apply as a candidate under a party and also cast votes for those who have shown interest for an office
-                  </p>
-                </article>
                 <div
-                  className="home-btn"
+                  className="overlay"
                 >
-                  <Link
-                    to="/signup"
+                  <div
+                    className="home-item-con"
                   >
-                    <a
-                      href="/signup"
-                      onClick={[Function]}
+                    <h1>
+                      POLITICO
+                    </h1>
+                    <article>
+                      <p>
+                        This is an application where users can vote for election. In addition you can apply as a candidate under a party and also cast votes for those who have shown interest for an office
+                      </p>
+                    </article>
+                    <div
+                      className="home-btn"
                     >
-                      <Button
-                        className="btn"
-                        value="Sign Up"
+                      <Link
+                        to="/signup"
                       >
-                        <button
-                          className="btn"
+                        <a
+                          href="/signup"
+                          onClick={[Function]}
                         >
-                          Sign Up
-                        </button>
-                      </Button>
-                    </a>
-                  </Link>
-                  <Link
-                    to="/login"
-                  >
-                    <a
-                      href="/login"
-                      onClick={[Function]}
-                    >
-                      <Button
-                        className="btn"
-                        value="Login"
+                          <Button
+                            className="btn"
+                            value="Sign Up"
+                          >
+                            <button
+                              className="btn"
+                            >
+                              Sign Up
+                            </button>
+                          </Button>
+                        </a>
+                      </Link>
+                      <Link
+                        to="/login"
                       >
-                        <button
-                          className="btn"
+                        <a
+                          href="/login"
+                          onClick={[Function]}
                         >
-                          Login
-                        </button>
-                      </Button>
-                    </a>
-                  </Link>
+                          <Button
+                            className="btn"
+                            value="Login"
+                          >
+                            <button
+                              className="btn"
+                            >
+                              Login
+                            </button>
+                          </Button>
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+            <Footer>
+              <footer>
+                <span>
+                  Copyright@2019  @fantastic-genius (Andela Bootcamp Cycle41)
+                </span>
+              </footer>
+            </Footer>
           </div>
-        </div>
-        <Footer>
-          <footer>
-            <span>
-              Copyright@2019  @fantastic-genius (Andela Bootcamp Cycle41)
-            </span>
-          </footer>
-        </Footer>
-      </div>
-    </Home>
-  </Router>
-</BrowserRouter>
+        </Home>
+      </Connect(Home)>
+    </Router>
+  </BrowserRouter>
+</Provider>
 `;

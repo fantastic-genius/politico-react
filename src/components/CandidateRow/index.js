@@ -10,15 +10,24 @@ const CandidateRow = ({candidate, onVote}) => {
     logourl
   } = candidate;
 
+  /* istanbul ignore handleCheck */
   const handleCheck = (e) => {
+    /* istanbul ignore next */
     const choice = e.target
+    /* istanbul ignore next */
     choice.checked = true;
+    /* istanbul ignore next */
     const choices = document.querySelectorAll('.choice');
+    /* istanbul ignore next */
     let parentTr = choice.closest('tr');
+    /* istanbul ignore next */
     let corBtn = parentTr.querySelectorAll('button');
+    /* istanbul ignore next */
     corBtn[0].classList.remove('hide');
 
+    /* istanbul ignore next */
     choices.forEach(choic => {
+      /* istanbul ignore if */
       if(choic !== choice){
         choic.checked = false;
         parentTr = choic.closest('tr');
@@ -34,7 +43,7 @@ const CandidateRow = ({candidate, onVote}) => {
     <tr>
       <td><input type="checkbox" className="choice" name="choice" onClick={handleCheck} /></td>
       <td><img src={passportUrl} alt={firstname} /></td>
-      <td><a>{`${firstname} ${lastname}`}</a></td>
+      <td>{`${firstname} ${lastname}`}</td>
       <td>{partyname}</td>
       <td><img src={logourl} alt="Logo" /></td>
       <td>

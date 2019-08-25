@@ -28,45 +28,41 @@ exports[`<Signin /> Rendering should render signin page correctly 1`] = `
 `;
 
 exports[`<Signin /> Rendering should render signin page correctly with its children 1`] = `
-<BrowserRouter>
-  <Router
-    history={
-      Object {
-        "action": "POP",
-        "block": [Function],
-        "createHref": [Function],
-        "go": [Function],
-        "goBack": [Function],
-        "goForward": [Function],
-        "length": 1,
-        "listen": [Function],
-        "location": Object {
-          "hash": "",
-          "pathname": "/",
-          "search": "",
-          "state": undefined,
-        },
-        "push": [Function],
-        "replace": [Function],
-      }
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
     }
-  >
-    <Connect(Signin)
-      store={
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
         Object {
-          "dispatch": [Function],
-          "getState": [Function],
-          "replaceReducer": [Function],
-          "subscribe": [Function],
-          Symbol(observable): [Function],
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
         }
       }
     >
-      <Signin
-        error={null}
-        fetched={false}
-        fetching={false}
-        signinAction={[Function]}
+      <Connect(Signin)
         store={
           Object {
             "dispatch": [Function],
@@ -76,172 +72,196 @@ exports[`<Signin /> Rendering should render signin page correctly with its child
             Symbol(observable): [Function],
           }
         }
-        user={Object {}}
       >
-        <div
-          className="container home-con"
+        <Signin
+          error={null}
+          fetched={false}
+          fetching={false}
+          signinAction={[Function]}
+          store={
+            Object {
+              "dispatch": [Function],
+              "getState": [Function],
+              "replaceReducer": [Function],
+              "subscribe": [Function],
+              Symbol(observable): [Function],
+            }
+          }
+          user={Object {}}
         >
-          <NavBar>
-            <header>
-              <div
-                className="app-name"
-              >
-                <Link
-                  to="/"
-                >
-                  <a
-                    href="/"
-                    onClick={[Function]}
-                  >
-                    <h2>
-                      POLITICO
-                    </h2>
-                  </a>
-                </Link>
-              </div>
-              <div
-                className="sign-btn"
-              >
-                <span
-                  className="home-btn"
-                >
-                  <Link
-                    to="/signup"
-                  >
-                    <a
-                      href="/signup"
-                      onClick={[Function]}
-                    >
-                      <Button
-                        className="btn"
-                        value="Sign Up"
-                      >
-                        <button
-                          className="btn"
-                        >
-                          Sign Up
-                        </button>
-                      </Button>
-                    </a>
-                  </Link>
-                  <Link
-                    to="/login"
-                  >
-                    <a
-                      href="/login"
-                      onClick={[Function]}
-                    >
-                      <Button
-                        className="btn"
-                        value="Login"
-                      >
-                        <button
-                          className="btn"
-                        >
-                          Login
-                        </button>
-                      </Button>
-                    </a>
-                  </Link>
-                </span>
-              </div>
-            </header>
-          </NavBar>
           <div
-            className="item-box"
+            className="container home-con"
           >
+            <Connect(NavBar)>
+              <NavBar
+                isAuthenticated={false}
+              >
+                <header>
+                  <div
+                    className="app-name"
+                  >
+                    <Link
+                      to="/"
+                    >
+                      <a
+                        href="/"
+                        onClick={[Function]}
+                      >
+                        <h2>
+                          POLITICO
+                        </h2>
+                      </a>
+                    </Link>
+                  </div>
+                  <div
+                    className="sign-btn"
+                  >
+                    <span
+                      className="home-btn"
+                    >
+                      <span
+                        className="home-btn"
+                      >
+                        <Link
+                          to="/signup"
+                        >
+                          <a
+                            href="/signup"
+                            onClick={[Function]}
+                          >
+                            <Button
+                              className="btn"
+                              value="Sign Up"
+                            >
+                              <button
+                                className="btn"
+                              >
+                                Sign Up
+                              </button>
+                            </Button>
+                          </a>
+                        </Link>
+                        <Link
+                          to="/login"
+                        >
+                          <a
+                            href="/login"
+                            onClick={[Function]}
+                          >
+                            <Button
+                              className="btn"
+                              value="Login"
+                            >
+                              <button
+                                className="btn"
+                              >
+                                Login
+                              </button>
+                            </Button>
+                          </a>
+                        </Link>
+                      </span>
+                    </span>
+                  </div>
+                </header>
+              </NavBar>
+            </Connect(NavBar)>
             <div
-              className="header"
+              className="item-box"
             >
-              <h2>
-                Sign In
-              </h2>
-            </div>
-            <form
-              id="signup-form"
-              onSubmit={[Function]}
-            >
-              <InputForm
-                id="email"
-                labelName="Email"
-                name="email"
-                onChange={[Function]}
-                pattern="^[\\\\w.]+@[\\\\w]{2,20}.[a-z]{2,10}$"
-                placeholder="Email"
-                required={true}
-                title="must be a valid email"
-                type="email"
-              >
-                <div>
-                  <label
-                    htmlFor="email"
-                  >
-                    Email
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    onChange={[Function]}
-                    pattern="^[\\\\w.]+@[\\\\w]{2,20}.[a-z]{2,10}$"
-                    placeholder="Email"
-                    required={true}
-                    title="must be a valid email"
-                    type="email"
-                  />
-                </div>
-              </InputForm>
-              <InputForm
-                autoComplete="off"
-                id="password"
-                labelName="Password"
-                name="password"
-                onChange={[Function]}
-                pattern="^[\\\\w]{8,20}$"
-                required={true}
-                title="password is required and must be more than 8 character"
-                type="password"
-              >
-                <div>
-                  <label
-                    htmlFor="password"
-                  >
-                    Password
-                  </label>
-                  <input
-                    autoComplete="off"
-                    id="password"
-                    name="password"
-                    onChange={[Function]}
-                    pattern="^[\\\\w]{8,20}$"
-                    required={true}
-                    title="password is required and must be more than 8 character"
-                    type="password"
-                  />
-                </div>
-              </InputForm>
               <div
-                className="btn-con"
+                className="header"
               >
-                <Button
-                  className="btn btn-success"
-                  id="login"
-                  type="submit"
-                  value="Login"
+                <h2>
+                  Sign In
+                </h2>
+              </div>
+              <form
+                id="signup-form"
+                onSubmit={[Function]}
+              >
+                <InputForm
+                  id="email"
+                  labelName="Email"
+                  name="email"
+                  onChange={[Function]}
+                  pattern="^[\\\\w.]+@[\\\\w]{2,20}.[a-z]{2,10}$"
+                  placeholder="Email"
+                  required={true}
+                  title="must be a valid email"
+                  type="email"
                 >
-                  <button
+                  <div>
+                    <label
+                      htmlFor="email"
+                    >
+                      Email
+                    </label>
+                    <input
+                      id="email"
+                      name="email"
+                      onChange={[Function]}
+                      pattern="^[\\\\w.]+@[\\\\w]{2,20}.[a-z]{2,10}$"
+                      placeholder="Email"
+                      required={true}
+                      title="must be a valid email"
+                      type="email"
+                    />
+                  </div>
+                </InputForm>
+                <InputForm
+                  autoComplete="off"
+                  id="password"
+                  labelName="Password"
+                  name="password"
+                  onChange={[Function]}
+                  pattern="^[\\\\w]{8,20}$"
+                  required={true}
+                  title="password is required and must be more than 8 character"
+                  type="password"
+                >
+                  <div>
+                    <label
+                      htmlFor="password"
+                    >
+                      Password
+                    </label>
+                    <input
+                      autoComplete="off"
+                      id="password"
+                      name="password"
+                      onChange={[Function]}
+                      pattern="^[\\\\w]{8,20}$"
+                      required={true}
+                      title="password is required and must be more than 8 character"
+                      type="password"
+                    />
+                  </div>
+                </InputForm>
+                <div
+                  className="btn-con"
+                >
+                  <Button
                     className="btn btn-success"
                     id="login"
                     type="submit"
+                    value="Login"
                   >
-                    Login
-                  </button>
-                </Button>
-              </div>
-            </form>
+                    <button
+                      className="btn btn-success"
+                      id="login"
+                      type="submit"
+                    >
+                      Login
+                    </button>
+                  </Button>
+                </div>
+              </form>
+            </div>
           </div>
-        </div>
-      </Signin>
-    </Connect(Signin)>
-  </Router>
-</BrowserRouter>
+        </Signin>
+      </Connect(Signin)>
+    </Router>
+  </BrowserRouter>
+</Provider>
 `;

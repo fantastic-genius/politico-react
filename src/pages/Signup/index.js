@@ -46,7 +46,7 @@ const Signup = ({
 
     if(fetched){
       callToast('success', 'Registration Successful');
-      history && history.push('/')
+      history && history.push('/vote')
     }
 
   }, [error, fetched])

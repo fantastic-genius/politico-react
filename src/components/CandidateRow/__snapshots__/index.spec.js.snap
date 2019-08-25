@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<CandidateRow /> Rendering should render CandidateRow correctly in debug mode 1`] = `
+exports[`<CandidateRow /> Rendering should render CandidateRow correctly 1`] = `
 <tr>
   <td>
     <input
@@ -17,9 +17,7 @@ exports[`<CandidateRow /> Rendering should render CandidateRow correctly in debu
     />
   </td>
   <td>
-    <a>
-      john mark
-    </a>
+    john mark
   </td>
   <td>
     All peoples party

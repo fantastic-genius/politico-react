@@ -8,6 +8,8 @@ import Home from '@pages/Home';
 import Signup from '@pages/Signup';
 import Signin from '@pages/Signin';
 import Vote from '@pages/Vote';
+import MyVote from '@pages/ViewVote';
+import PrivateRoute from '@src/PrivateRoute';
 
 const App = () => {
   return (
@@ -15,7 +17,8 @@ const App = () => {
       <Route exact path="/" component={Home} />
       <Route path="/signup" component={Signup} />
       <Route path="/login" component={Signin} />
-      <Route path="/vote" component={Vote} />
+      <PrivateRoute path="/vote" component={Vote} />
+      <PrivateRoute path="/myvote" component={MyVote} />
       <ToastContainer autoClose={6000} position="top-center" hideProgressBar rtl={false} pauseOnHover />
     </Fragment>
   )
