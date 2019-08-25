@@ -1,122 +1,274 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<NavBar /> Rendering of NavBar and children should render NavBar correctly in debug mode 1`] = `
-<BrowserRouter>
-  <Router
-    history={
-      Object {
-        "action": "POP",
-        "block": [Function],
-        "createHref": [Function],
-        "go": [Function],
-        "goBack": [Function],
-        "goForward": [Function],
-        "length": 1,
-        "listen": [Function],
-        "location": Object {
-          "hash": "",
-          "pathname": "/",
-          "search": "",
-          "state": undefined,
-        },
-        "push": [Function],
-        "replace": [Function],
-      }
-    }
-  >
-    <NavBar>
-      <header>
-        <div
-          className="app-name"
-        >
-          <Link
-            to="/"
-          >
-            <a
-              href="/"
-              onClick={[Function]}
-            >
-              <h2>
-                POLITICO
-              </h2>
-            </a>
-          </Link>
-        </div>
-        <div
-          className="sign-btn"
-        >
-          <span
-            className="home-btn"
-          >
-            <Link
-              to="/signup"
-            >
-              <a
-                href="/signup"
-                onClick={[Function]}
-              >
-                <Button
-                  className="btn"
-                  value="Sign Up"
-                >
-                  <button
-                    className="btn"
-                  >
-                    Sign Up
-                  </button>
-                </Button>
-              </a>
-            </Link>
-            <Link
-              to="/login"
-            >
-              <a
-                href="/login"
-                onClick={[Function]}
-              >
-                <Button
-                  className="btn"
-                  value="Login"
-                >
-                  <button
-                    className="btn"
-                  >
-                    Login
-                  </button>
-                </Button>
-              </a>
-            </Link>
-          </span>
-        </div>
-      </header>
-    </NavBar>
-  </Router>
-</BrowserRouter>
-`;
-
-exports[`<NavBar /> Rendering should render NavBar correctly 1`] = `
-<Router
-  history={
+<Provider
+  store={
     Object {
-      "action": "POP",
-      "block": [Function],
-      "createHref": [Function],
-      "go": [Function],
-      "goBack": [Function],
-      "goForward": [Function],
-      "length": 1,
-      "listen": [Function],
-      "location": Object {
-        "hash": "",
-        "pathname": "/",
-        "search": "",
-        "state": undefined,
-      },
-      "push": [Function],
-      "replace": [Function],
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
     }
   }
 >
-  <NavBar />
-</Router>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(NavBar)
+        isAuthenticated={false}
+      >
+        <NavBar
+          isAuthenticated={false}
+        >
+          <header>
+            <div
+              className="app-name"
+            >
+              <Link
+                to="/"
+              >
+                <a
+                  href="/"
+                  onClick={[Function]}
+                >
+                  <h2>
+                    POLITICO
+                  </h2>
+                </a>
+              </Link>
+            </div>
+            <div
+              className="sign-btn"
+            >
+              <span
+                className="home-btn"
+              >
+                <span
+                  className="home-btn"
+                >
+                  <Link
+                    to="/signup"
+                  >
+                    <a
+                      href="/signup"
+                      onClick={[Function]}
+                    >
+                      <Button
+                        className="btn"
+                        value="Sign Up"
+                      >
+                        <button
+                          className="btn"
+                        >
+                          Sign Up
+                        </button>
+                      </Button>
+                    </a>
+                  </Link>
+                  <Link
+                    to="/login"
+                  >
+                    <a
+                      href="/login"
+                      onClick={[Function]}
+                    >
+                      <Button
+                        className="btn"
+                        value="Login"
+                      >
+                        <button
+                          className="btn"
+                        >
+                          Login
+                        </button>
+                      </Button>
+                    </a>
+                  </Link>
+                </span>
+              </span>
+            </div>
+          </header>
+        </NavBar>
+      </Connect(NavBar)>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;
+
+exports[`<NavBar /> Rendering of NavBar and children should render NavBar correctly in debug mode 2`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(NavBar)
+        isAuthenticated={true}
+      >
+        <NavBar
+          isAuthenticated={false}
+        >
+          <header>
+            <div
+              className="app-name"
+            >
+              <Link
+                to="/"
+              >
+                <a
+                  href="/"
+                  onClick={[Function]}
+                >
+                  <h2>
+                    POLITICO
+                  </h2>
+                </a>
+              </Link>
+            </div>
+            <div
+              className="sign-btn"
+            >
+              <span
+                className="home-btn"
+              >
+                <span
+                  className="home-btn"
+                >
+                  <Link
+                    to="/signup"
+                  >
+                    <a
+                      href="/signup"
+                      onClick={[Function]}
+                    >
+                      <Button
+                        className="btn"
+                        value="Sign Up"
+                      >
+                        <button
+                          className="btn"
+                        >
+                          Sign Up
+                        </button>
+                      </Button>
+                    </a>
+                  </Link>
+                  <Link
+                    to="/login"
+                  >
+                    <a
+                      href="/login"
+                      onClick={[Function]}
+                    >
+                      <Button
+                        className="btn"
+                        value="Login"
+                      >
+                        <button
+                          className="btn"
+                        >
+                          Login
+                        </button>
+                      </Button>
+                    </a>
+                  </Link>
+                </span>
+              </span>
+            </div>
+          </header>
+        </NavBar>
+      </Connect(NavBar)>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;
+
+exports[`<NavBar /> Rendering should render NavBar correctly 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "clear": [Function],
+          "get": [Function],
+          "notify": [Function],
+          "subscribe": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        },
+        "unsubscribe": [Function],
+      },
+    }
+  }
+>
+  <BrowserRouter>
+    <Connect(NavBar)
+      isAuthenticated={false}
+    />
+  </BrowserRouter>
+</ContextProvider>
 `;

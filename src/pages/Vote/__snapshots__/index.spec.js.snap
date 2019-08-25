@@ -85,42 +85,48 @@ exports[`<Vote /> Rendering should render Vote page correctly with its children 
           error={null}
           getOfficeCandidates={[Function]}
           getOffices={[Function]}
-          getVotedOffices={[Function]}
+          getVotedCandidates={[Function]}
           offices={Array []}
           token=""
           voteCandidate={[Function]}
           voted={false}
-          votedOffices={Array []}
+          votedCandidates={Array []}
         >
           <DashboardContainer>
             <div
               className="container dashboard"
             >
-              <DashboardNavBar>
-                <header>
-                  <div
-                    className="title"
-                  >
-                    <h3>
-                      User Dashboard
-                    </h3>
-                  </div>
-                  <div
-                    className="logout-con"
-                  >
-                    <button
-                      className="btn btn-warning"
-                      id="logout"
+              <Connect(DashboardNavBar)>
+                <DashboardNavBar
+                  signout={[Function]}
+                  user={Object {}}
+                >
+                  <header>
+                    <div
+                      className="title"
                     >
-                      <a
-                        href="#"
+                      <h3>
+                        User Dashboard
+                      </h3>
+                    </div>
+                    <div
+                      className="logout-con"
+                    >
+                      <button
+                        className="btn btn-warning"
+                        id="logout"
+                        onClick={[Function]}
                       >
-                        Logout
-                      </a>
-                    </button>
-                  </div>
-                </header>
-              </DashboardNavBar>
+                        <a
+                          href="#"
+                        >
+                          Logout
+                        </a>
+                      </button>
+                    </div>
+                  </header>
+                </DashboardNavBar>
+              </Connect(DashboardNavBar)>
               <div
                 className="main"
               >
@@ -160,18 +166,6 @@ exports[`<Vote /> Rendering should render Vote page correctly with its children 
                       <ul>
                         <li>
                           <Link
-                            to="/dashboard"
-                          >
-                            <a
-                              href="/dashboard"
-                              onClick={[Function]}
-                            >
-                              Dashboard
-                            </a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
                             to="/vote"
                           >
                             <a
@@ -183,61 +177,16 @@ exports[`<Vote /> Rendering should render Vote page correctly with its children 
                           </Link>
                         </li>
                         <li>
-                          <a
-                            href="view_parties.html"
+                          <Link
+                            to="/myvote"
                           >
-                            Parties
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="my_votes.html"
-                          >
-                            My Votes
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="petition.html"
-                          >
-                            Submit Petition
-                          </a>
-                        </li>
-                        <li
-                          className="treeview"
-                        >
-                          <a
-                            href="#"
-                          >
-                            <span>
-                              Settings
-                            </span>
-                            <span
-                              className="to-right"
+                            <a
+                              href="/myvote"
+                              onClick={[Function]}
                             >
-                              <i
-                                className="arrow down"
-                              />
-                            </span>
-                          </a>
-                          <ul
-                            className="treeview-menu hide"
-                          >
-                            <li>
-                              <a
-                                href="profile.html"
-                              >
-                                Update Profile
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                href="change_password.html"
-                              >
-                                Change Password
-                              </a>
-                            </li>
-                          </ul>
+                              My Votes
+                            </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -298,14 +247,12 @@ exports[`<Vote /> Rendering should render Vote page correctly with its children 
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td />
-                          <td>
-                            No Candidate for this office
-                          </td>
-                        </tr>
+                        <tr />
                       </tbody>
                     </table>
+                    <h4>
+                      No Candidate for this office
+                    </h4>
                   </div>
                 </article>
               </div>
@@ -371,42 +318,48 @@ exports[`<Vote /> Rendering should render Vote page correctly with its children 
           error={null}
           getOfficeCandidates={[Function]}
           getOffices={[Function]}
-          getVotedOffices={[Function]}
+          getVotedCandidates={[Function]}
           offices={Array []}
           token=""
           voteCandidate={[Function]}
           voted={false}
-          votedOffices={Array []}
+          votedCandidates={Array []}
         >
           <DashboardContainer>
             <div
               className="container dashboard"
             >
-              <DashboardNavBar>
-                <header>
-                  <div
-                    className="title"
-                  >
-                    <h3>
-                      User Dashboard
-                    </h3>
-                  </div>
-                  <div
-                    className="logout-con"
-                  >
-                    <button
-                      className="btn btn-warning"
-                      id="logout"
+              <Connect(DashboardNavBar)>
+                <DashboardNavBar
+                  signout={[Function]}
+                  user={Object {}}
+                >
+                  <header>
+                    <div
+                      className="title"
                     >
-                      <a
-                        href="#"
+                      <h3>
+                        User Dashboard
+                      </h3>
+                    </div>
+                    <div
+                      className="logout-con"
+                    >
+                      <button
+                        className="btn btn-warning"
+                        id="logout"
+                        onClick={[Function]}
                       >
-                        Logout
-                      </a>
-                    </button>
-                  </div>
-                </header>
-              </DashboardNavBar>
+                        <a
+                          href="#"
+                        >
+                          Logout
+                        </a>
+                      </button>
+                    </div>
+                  </header>
+                </DashboardNavBar>
+              </Connect(DashboardNavBar)>
               <div
                 className="main"
               >
@@ -446,18 +399,6 @@ exports[`<Vote /> Rendering should render Vote page correctly with its children 
                       <ul>
                         <li>
                           <Link
-                            to="/dashboard"
-                          >
-                            <a
-                              href="/dashboard"
-                              onClick={[Function]}
-                            >
-                              Dashboard
-                            </a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
                             to="/vote"
                           >
                             <a
@@ -469,61 +410,16 @@ exports[`<Vote /> Rendering should render Vote page correctly with its children 
                           </Link>
                         </li>
                         <li>
-                          <a
-                            href="view_parties.html"
+                          <Link
+                            to="/myvote"
                           >
-                            Parties
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="my_votes.html"
-                          >
-                            My Votes
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="petition.html"
-                          >
-                            Submit Petition
-                          </a>
-                        </li>
-                        <li
-                          className="treeview"
-                        >
-                          <a
-                            href="#"
-                          >
-                            <span>
-                              Settings
-                            </span>
-                            <span
-                              className="to-right"
+                            <a
+                              href="/myvote"
+                              onClick={[Function]}
                             >
-                              <i
-                                className="arrow down"
-                              />
-                            </span>
-                          </a>
-                          <ul
-                            className="treeview-menu hide"
-                          >
-                            <li>
-                              <a
-                                href="profile.html"
-                              >
-                                Update Profile
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                href="change_password.html"
-                              >
-                                Change Password
-                              </a>
-                            </li>
-                          </ul>
+                              My Votes
+                            </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -584,14 +480,12 @@ exports[`<Vote /> Rendering should render Vote page correctly with its children 
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td />
-                          <td>
-                            No Candidate for this office
-                          </td>
-                        </tr>
+                        <tr />
                       </tbody>
                     </table>
+                    <h4>
+                      No Candidate for this office
+                    </h4>
                   </div>
                 </article>
               </div>

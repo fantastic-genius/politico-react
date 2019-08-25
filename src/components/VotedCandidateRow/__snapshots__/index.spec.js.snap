@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<VotedCandidateRow /> Rendering should render VotedCandidateRow correctly in debug mode 1`] = `
+<tr>
+  <td>
+    President
+  </td>
+  <td>
+    john mark
+  </td>
+  <td>
+    <img
+      alt="Logo"
+      src="https://app.com/logo"
+    />
+  </td>
+  <td>
+    All peoples party
+  </td>
+</tr>
+`;

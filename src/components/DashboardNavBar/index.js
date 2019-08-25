@@ -1,16 +1,25 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
+import { signout } from '@actions/Auth';
 
-const DashboardNavBar = () => {
+const DashboardNavBar = (props) => {
+  const onSignOut = () => {
+    props.signout();
+    <Redirect to='/' />
+  }
   return (
     <header>
       <div className="title">
         <h3>User Dashboard</h3>
       </div>
       <div className="logout-con">
-        <button id="logout" className="btn btn-warning"><a href="#">Logout</a></button>
+        <button id="logout" className="btn btn-warning" onClick={onSignOut}><a href="#">Logout</a></button>
       </div>
     </header>
   );
 }
-
-export default DashboardNavBar;
+const mapStateToProps = state => ({
+  user: state.auth.user
+})
+export default connect(mapStateToProps, {signout})(DashboardNavBar);

@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import NavBar from '@components/NavBar';
 import Footer from '@components/Footer';
 import Button from '@components/Button';
 
-const Home = () => (
+const Home = ({isAuthenticated}) => (
     <div className="container home-con" >
       <NavBar />
       <div className="main">
@@ -18,14 +19,17 @@ const Home = () => (
                       under a party and also cast votes for those who have shown interest for an office
                   </p>
               </article>
-              <div className="home-btn">
-                  <Link to='/signup'>
-                    <Button className="btn" value='Sign Up'/>
-                  </Link>
-                  <Link to='/login'>
-                    <Button className="btn" value='Login'/>
-                  </Link>
-              </div>
+              {
+                !isAuthenticated ?
+                  (<div className="home-btn">
+                    <Link to='/signup'>
+                      <Button className="btn" value='Sign Up'/>
+                    </Link>
+                    <Link to='/login'>
+                      <Button className="btn" value='Login'/>
+                    </Link>
+                </div>) : ''
+              }
             </div>
           </div> 
         </div>
@@ -34,4 +38,8 @@ const Home = () => (
     </div>
   )
 
-export default Home;
+  const mapStateToProps = state => ({
+    isAuthenticated: state.auth.isAuthenticated
+  });
+  
+  export default connect(mapStateToProps, {})(Home);

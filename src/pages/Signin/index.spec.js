@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { BrowserRouter as Router } from 'react-router-dom'
+import { Provider } from 'react-redux';
 import store from '@src/store';
 import Signin from './index';
 
@@ -17,9 +18,11 @@ describe('<Signin />', () => {
 
     it('should render signin page correctly with its children', () => {
         const component = mount(
-          <Router>
-            <Signin store={ store }/>
-          </Router>
+          <Provider store={store}>
+            <Router>
+              <Signin store={ store }/>
+            </Router>
+          </Provider>
         );
         expect(component).toMatchSnapshot();
         expect(component.find('button')).toHaveLength(3);

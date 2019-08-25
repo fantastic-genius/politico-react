@@ -1,35 +1,35 @@
 import * as types from '@actions/actionTypes';
 
 const initialState = {
-  officesLoading: false,
-  officesLoaded: false,
+  votedCandidatesLoading: false,
+  votedCandidatesLoaded: false,
   candidatesLoading: false,
   candidatesLoaded: false,
   voting: false,
   voted: false,
-  offices: [],
+  votedCandidates: [],
   candidates: [],
   error: null
 }
 
 const voteReducer = (state=initialState, {type, payload}) => {
   switch (type) {
-    case types.GET_VOTED_OFFICES_PENDING:
+    case types.GET_VOTED_CANDIDATES_PENDING:
       return {
         ...state,
-        officesLoading: true,
+        votedCandidatesLoading: true,
       };
-    case types.GET_VOTED_OFFICES_FULFILLED:
+    case types.GET_VOTED_CANDIDATES_FULFILLED:
       return {
         ...state,
-        officesLoading: false,
-        officesLoaded: true,
-        offices: payload
+        votedCandidatesLoading: false,
+        votedCandidatesLoaded: true,
+        votedCandidates: payload
       };
-    case types.GET_VOTED_OFFICES_REJECTED:
+    case types.GET_VOTED_CANDIDATES_REJECTED:
       return {
         ...state,
-        officesLoading: false,
+        votedCandidatesLoading: false,
         error: payload,
       };
     case types.GET_OFFICE_CANDIDATES_PENDING:

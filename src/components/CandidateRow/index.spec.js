@@ -4,7 +4,7 @@ import CandidateRow from './index';
 
 describe('<CandidateRow />', () => {
   describe('Rendering', () => {
-    it('should render CandidateRow correctly in debug mode', () => {
+    it('should render CandidateRow correctly', () => {
       const candidate = {
         id: 1,
         firstname: 'john',

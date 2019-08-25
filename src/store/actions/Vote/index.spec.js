@@ -4,7 +4,7 @@ import moxios from 'moxios';
 import axios from 'axios';
 import { axiosCall } from '@src/utils';
 import {
-  getVotedOffices, getOfficeCandidates, voteCandidate, cleanUp
+  getVotedCandidates, getOfficeCandidates, voteCandidate, cleanUp
 } from './index';
 
 const middlewares = [thunk];
@@ -17,13 +17,13 @@ describe('VOTE ACTIONS', () => {
   beforeEach(() => {
     moxios.install(axios);
     store = mockStore({
-      officesLoading: false,
-      officesLoaded: false,
+      votedCandidatesLoading: false,
+      votedCandidatesLoaded: false,
       candidatesLoading: false,
       candidatesLoaded: false,
       voting: false,
       voted: false,
-      offices: [],
+      votedCandidates: [],
       candidates: [],
       error: null
     });
@@ -35,23 +35,26 @@ describe('VOTE ACTIONS', () => {
     localStorage.clear();
   });
 
-  describe('getVotedOffice Action', () => {
-    const offices = [
+  describe('getVotedCandidates Action', () => {
+    const votedCandidates = [
       {
-        id: '1',
+        officeid: '1',
         name: 'Governor',
+        firstname: 'Mark',
+        lastname: 'Ben'
+
       }
     ];
-    test('should handle getVotedOffice actions', (done) => {
+    test('should handle getVotedCandidates actions', (done) => {
       const expectedActions = [
-        'GET_VOTED_OFFICES_PENDING',
-        'GET_VOTED_OFFICES_FULFILLED'
+        'GET_VOTED_CANDIDATES_PENDING',
+        'GET_VOTED_CANDIDATES_FULFILLED'
       ];
       axiosCall.mockResolvedValue({
-        data: offices,
+        data: votedCandidates,
       });
       store
-        .dispatch(getVotedOffices(1, token))
+        .dispatch(getVotedCandidates(1, token))
         .then(() => {
           const dispatchedActions = store.getActions();
           const actionTypes = dispatchedActions.map(action => action.type);
@@ -60,16 +63,16 @@ describe('VOTE ACTIONS', () => {
       done();
     });
 
-    test('should return error when getVotedOffice is unsuccessful', (done) => {
+    test('should return error when getVotedCandidates is unsuccessful', (done) => {
       const expectedActions = [
-        'GET_VOTED_OFFICES_PENDING',
-        'GET_VOTED_OFFICES_REJECTED'
+        'GET_VOTED_CANDIDATES_PENDING',
+        'GET_VOTED_CANDIDATES_REJECTED'
       ];
 
       axiosCall.mockRejectedValue(
         { response: { message: 'Something went wrong' } }
       );
-      store.dispatch(getVotedOffices(1, token)).then(() => {
+      store.dispatch(getVotedCandidates(1, token)).then(() => {
         const dispatchedActions = store.getActions();
         const actionTypes = dispatchedActions.map(action => action.type);
         expect(actionTypes).toEqual(expectedActions);

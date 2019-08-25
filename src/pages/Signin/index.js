@@ -36,7 +36,7 @@ const Signin = ({
 
     if(fetched){
       callToast('success', 'Login Successful');
-      history && history.push('/')
+      history && history.push('/vote')
     }
 
   }, [error, fetched])
