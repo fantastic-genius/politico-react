@@ -1,4 +1,5 @@
 import React from 'react';
+import userImg from '../../assets/images/user.jpg'
 
 const CandidateRow = ({candidate, onVote}) => {
   const {
@@ -42,7 +43,7 @@ const CandidateRow = ({candidate, onVote}) => {
   return (
     <tr>
       <td><input type="checkbox" className="choice" name="choice" onClick={handleCheck} /></td>
-      <td><img src={passportUrl} alt={firstname} /></td>
+      <td><img src={passportUrl || userImg} alt={firstname} /></td>
       <td>{`${firstname} ${lastname}`}</td>
       <td>{partyname}</td>
       <td><img src={logourl} alt="Logo" /></td>

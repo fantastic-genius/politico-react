@@ -227,7 +227,6 @@ exports[`<Signup /> Rendering should render signup page correctly with its child
                   name="othername"
                   onChange={[Function]}
                   placeholder="Other Name"
-                  required={true}
                   type="text"
                 >
                   <div>
@@ -241,7 +240,6 @@ exports[`<Signup /> Rendering should render signup page correctly with its child
                       name="othername"
                       onChange={[Function]}
                       placeholder="Other Name"
-                      required={true}
                       type="text"
                     />
                   </div>

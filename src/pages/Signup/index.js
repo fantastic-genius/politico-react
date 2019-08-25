@@ -78,7 +78,6 @@ const Signup = ({
             placeholder='Other Name'
             name='othername'
             onChange={ onChange }
-            required
           />
           <InputForm 
             id='lastname'
