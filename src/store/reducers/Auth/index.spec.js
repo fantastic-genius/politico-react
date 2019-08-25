@@ -67,10 +67,10 @@ describe('Auth Reducer', () => {
     });
   });
 
-  it('Should handle SIGNUP_CLEAN_UP', () => {
+  it('Should handle AUTH_CLEAN_UP', () => {
     expect(authReducer (
       initialState, {
-        type: 'SIGNUP_CLEAN_UP'
+        type: 'AUTH_CLEAN_UP'
       }
     )).toEqual({
       ...initialState
@@ -136,16 +136,6 @@ describe('Auth Reducer', () => {
       ...initialState,
       error: 'Something went wrong',
       fetching: false,
-    });
-  });
-
-  it('Should handle SIGNIN_CLEAN_UP', () => {
-    expect(authReducer (
-      initialState, {
-        type: 'SIGNIN_CLEAN_UP'
-      }
-    )).toEqual({
-      ...initialState
     });
   });
 });
