@@ -72,7 +72,7 @@ const Vote = (props) => {
     if (voted) {
       /* istanbul ignore next */
       callToast('success', 'You have successfully voted');
-    }else if(error){
+    }else if(error && error !== 'You have not made any vote'){
       /* istanbul ignore next */
       callToast('error', error);
     }

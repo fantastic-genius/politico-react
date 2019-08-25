@@ -43,8 +43,7 @@ const signout = () => dispatch => {
   dispatch({type: 'SIGNOUT'});
   localStorage.clear()
   dispatch({type: 'SIGNOUT_SUCCESSFUL'});
-  dispatch(setUser())
-
+  dispatch({type: 'AUTH_CLEAN_UP'});
 }
 
 export { signup, setUser, signin, signout };

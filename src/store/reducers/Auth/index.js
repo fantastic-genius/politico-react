@@ -29,7 +29,7 @@ const authReducer = (state=initialValues, action) => {
         isAuthenticated: true,
         token: action.payload.token
       };
-    case 'SIGNUP_CLEAN_UP':
+    case 'AUTH_CLEAN_UP':
       return {
         ...initialValues
       };
@@ -60,10 +60,6 @@ const authReducer = (state=initialValues, action) => {
         isAuthenticated: true,
         token: action.payload.token
       };
-    case 'SIGNIN_CLEAN_UP':
-      return {
-        ...initialValues
-      }
     default:
       return state;
   }
