@@ -7,7 +7,7 @@ const initialValues = {
     token: '',
 }
 
-const reducer = (state=initialValues, action) => {
+const authReducer = (state=initialValues, action) => {
   switch (action.type) {
     case 'SIGNUP':
       return {
@@ -37,7 +37,8 @@ const reducer = (state=initialValues, action) => {
       return {
         ...state,
         user: action.payload.user,
-        isAuthenticated: action.payload.isAuthenticated
+        isAuthenticated: action.payload.isAuthenticated,
+        token: action.payload.token
       };
     case 'SIGNIN':
       return {
@@ -68,4 +69,4 @@ const reducer = (state=initialValues, action) => {
   }
 }
 
-export default reducer;
+export default authReducer;

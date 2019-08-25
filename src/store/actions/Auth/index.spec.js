@@ -132,7 +132,7 @@ describe('AUTH ACTIONS', () => {
       axiosCall.mockRejectedValue(
         { response: { message: 'Something went wrong' } }
       );
-      store.dispatch(signup(user)).then(() => {
+      store.dispatch(signin(login)).then(() => {
         const dispatchedActions = store.getActions();
         const actionTypes = dispatchedActions.map(action => action.type);
         expect(actionTypes).toEqual(expectedActions);

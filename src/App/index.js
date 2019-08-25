@@ -2,19 +2,20 @@ import React, { Fragment } from 'react';
 import { Route, HashRouter as Router, withRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
+import useSetUser from '@store/hooks';
+import store from '@src/store';
 import Home from '@pages/Home';
 import Signup from '@pages/Signup';
 import Signin from '@pages/Signin';
-import useSetUser from '@store/hooks';
-import store from '@src/store';
+import Vote from '@pages/Vote';
 
 const App = () => {
-  useSetUser({ ...store });
   return (
     <Fragment>
       <Route exact path="/" component={Home} />
       <Route path="/signup" component={Signup} />
       <Route path="/login" component={Signin} />
+      <Route path="/vote" component={Vote} />
       <ToastContainer autoClose={6000} position="top-center" hideProgressBar rtl={false} pauseOnHover />
     </Fragment>
   )
@@ -22,12 +23,15 @@ const App = () => {
 
 const AppWithRouter = withRouter(App)
 
-const Routes = () => (
-  <Provider store={store}>
-    <Router>
-      <AppWithRouter />
-    </Router>
-  </Provider>
-);
+const Routes = () => {
+  useSetUser({ ...store });
+  return (
+    <Provider store={store}>
+      <Router>
+        <AppWithRouter />
+      </Router>
+    </Provider>
+  )
+};
 
 export default Routes;

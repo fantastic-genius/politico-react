@@ -1,0 +1,612 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Vote /> Rendering should render Vote page correctly 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <Connect(Vote) />
+</Router>
+`;
+
+exports[`<Vote /> Rendering should render Vote page correctly with its children when candidates is loaded 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(Vote)
+        candidates={
+          Array [
+            Object {
+              "firstname": "john",
+              "id": 1,
+              "lastname": "mark",
+              "logourl": "https://app.com/logo",
+              "partyname": "All peoples party",
+              "passportUrl": "https://w.pe./img",
+            },
+          ]
+        }
+        candidatesLoaded={true}
+      >
+        <Vote
+          candidates={Array []}
+          candidatesLoaded={false}
+          candidatesLoading={false}
+          cleanUp={[Function]}
+          error={null}
+          getOfficeCandidates={[Function]}
+          getOffices={[Function]}
+          getVotedOffices={[Function]}
+          offices={Array []}
+          token=""
+          voteCandidate={[Function]}
+          voted={false}
+          votedOffices={Array []}
+        >
+          <DashboardContainer>
+            <div
+              className="container dashboard"
+            >
+              <DashboardNavBar>
+                <header>
+                  <div
+                    className="title"
+                  >
+                    <h3>
+                      User Dashboard
+                    </h3>
+                  </div>
+                  <div
+                    className="logout-con"
+                  >
+                    <button
+                      className="btn btn-warning"
+                      id="logout"
+                    >
+                      <a
+                        href="#"
+                      >
+                        Logout
+                      </a>
+                    </button>
+                  </div>
+                </header>
+              </DashboardNavBar>
+              <div
+                className="main"
+              >
+                <UserDashboardSideBar>
+                  <aside>
+                    <Connect(UserInfo)>
+                      <UserInfo
+                        user={Object {}}
+                      >
+                        <div
+                          className="user"
+                        >
+                          <div
+                            className="photo"
+                          >
+                            <img
+                              alt="User"
+                              id="user-img"
+                              src="test-file-stub"
+                            />
+                          </div>
+                          <div
+                            className="username"
+                          >
+                            <p
+                              id="user-name"
+                            >
+                              undefined undefined
+                            </p>
+                          </div>
+                        </div>
+                      </UserInfo>
+                    </Connect(UserInfo)>
+                    <div
+                      className="menu"
+                    >
+                      <ul>
+                        <li>
+                          <Link
+                            to="/dashboard"
+                          >
+                            <a
+                              href="/dashboard"
+                              onClick={[Function]}
+                            >
+                              Dashboard
+                            </a>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/vote"
+                          >
+                            <a
+                              href="/vote"
+                              onClick={[Function]}
+                            >
+                              Vote
+                            </a>
+                          </Link>
+                        </li>
+                        <li>
+                          <a
+                            href="view_parties.html"
+                          >
+                            Parties
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="my_votes.html"
+                          >
+                            My Votes
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="petition.html"
+                          >
+                            Submit Petition
+                          </a>
+                        </li>
+                        <li
+                          className="treeview"
+                        >
+                          <a
+                            href="#"
+                          >
+                            <span>
+                              Settings
+                            </span>
+                            <span
+                              className="to-right"
+                            >
+                              <i
+                                className="arrow down"
+                              />
+                            </span>
+                          </a>
+                          <ul
+                            className="treeview-menu hide"
+                          >
+                            <li>
+                              <a
+                                href="profile.html"
+                              >
+                                Update Profile
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="change_password.html"
+                              >
+                                Change Password
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </aside>
+                </UserDashboardSideBar>
+                <article>
+                  <div
+                    className="title-con"
+                  >
+                    <h3>
+                      Vote Choice Candidate
+                    </h3>
+                    <hr />
+                  </div>
+                  <div
+                    id="alert"
+                  />
+                  <div
+                    className="select-con"
+                  >
+                    <label
+                      htmlFor="office"
+                    >
+                      Political Office
+                    </label>
+                    <select
+                      id="office-select"
+                      name="office"
+                      onChange={[Function]}
+                    >
+                      <option>
+                        Select an Office
+                      </option>
+                    </select>
+                  </div>
+                  <div>
+                    <table
+                      id="candidates-table"
+                    >
+                      <thead>
+                        <tr>
+                          <td />
+                          <td>
+                            Photo
+                          </td>
+                          <td>
+                            Politician Name
+                          </td>
+                          <td>
+                            Party
+                          </td>
+                          <td>
+                            Party Logo
+                          </td>
+                          <td>
+                            Action
+                          </td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td />
+                          <td>
+                            No Candidate for this office
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </article>
+              </div>
+              <Footer>
+                <footer>
+                  <span>
+                    Copyright@2019  @fantastic-genius (Andela Bootcamp Cycle41)
+                  </span>
+                </footer>
+              </Footer>
+            </div>
+          </DashboardContainer>
+        </Vote>
+      </Connect(Vote)>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;
+
+exports[`<Vote /> Rendering should render Vote page correctly with its children when candidates is loading 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(Vote)
+        candidatesLoading={true}
+      >
+        <Vote
+          candidates={Array []}
+          candidatesLoaded={false}
+          candidatesLoading={false}
+          cleanUp={[Function]}
+          error={null}
+          getOfficeCandidates={[Function]}
+          getOffices={[Function]}
+          getVotedOffices={[Function]}
+          offices={Array []}
+          token=""
+          voteCandidate={[Function]}
+          voted={false}
+          votedOffices={Array []}
+        >
+          <DashboardContainer>
+            <div
+              className="container dashboard"
+            >
+              <DashboardNavBar>
+                <header>
+                  <div
+                    className="title"
+                  >
+                    <h3>
+                      User Dashboard
+                    </h3>
+                  </div>
+                  <div
+                    className="logout-con"
+                  >
+                    <button
+                      className="btn btn-warning"
+                      id="logout"
+                    >
+                      <a
+                        href="#"
+                      >
+                        Logout
+                      </a>
+                    </button>
+                  </div>
+                </header>
+              </DashboardNavBar>
+              <div
+                className="main"
+              >
+                <UserDashboardSideBar>
+                  <aside>
+                    <Connect(UserInfo)>
+                      <UserInfo
+                        user={Object {}}
+                      >
+                        <div
+                          className="user"
+                        >
+                          <div
+                            className="photo"
+                          >
+                            <img
+                              alt="User"
+                              id="user-img"
+                              src="test-file-stub"
+                            />
+                          </div>
+                          <div
+                            className="username"
+                          >
+                            <p
+                              id="user-name"
+                            >
+                              undefined undefined
+                            </p>
+                          </div>
+                        </div>
+                      </UserInfo>
+                    </Connect(UserInfo)>
+                    <div
+                      className="menu"
+                    >
+                      <ul>
+                        <li>
+                          <Link
+                            to="/dashboard"
+                          >
+                            <a
+                              href="/dashboard"
+                              onClick={[Function]}
+                            >
+                              Dashboard
+                            </a>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/vote"
+                          >
+                            <a
+                              href="/vote"
+                              onClick={[Function]}
+                            >
+                              Vote
+                            </a>
+                          </Link>
+                        </li>
+                        <li>
+                          <a
+                            href="view_parties.html"
+                          >
+                            Parties
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="my_votes.html"
+                          >
+                            My Votes
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="petition.html"
+                          >
+                            Submit Petition
+                          </a>
+                        </li>
+                        <li
+                          className="treeview"
+                        >
+                          <a
+                            href="#"
+                          >
+                            <span>
+                              Settings
+                            </span>
+                            <span
+                              className="to-right"
+                            >
+                              <i
+                                className="arrow down"
+                              />
+                            </span>
+                          </a>
+                          <ul
+                            className="treeview-menu hide"
+                          >
+                            <li>
+                              <a
+                                href="profile.html"
+                              >
+                                Update Profile
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="change_password.html"
+                              >
+                                Change Password
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </aside>
+                </UserDashboardSideBar>
+                <article>
+                  <div
+                    className="title-con"
+                  >
+                    <h3>
+                      Vote Choice Candidate
+                    </h3>
+                    <hr />
+                  </div>
+                  <div
+                    id="alert"
+                  />
+                  <div
+                    className="select-con"
+                  >
+                    <label
+                      htmlFor="office"
+                    >
+                      Political Office
+                    </label>
+                    <select
+                      id="office-select"
+                      name="office"
+                      onChange={[Function]}
+                    >
+                      <option>
+                        Select an Office
+                      </option>
+                    </select>
+                  </div>
+                  <div>
+                    <table
+                      id="candidates-table"
+                    >
+                      <thead>
+                        <tr>
+                          <td />
+                          <td>
+                            Photo
+                          </td>
+                          <td>
+                            Politician Name
+                          </td>
+                          <td>
+                            Party
+                          </td>
+                          <td>
+                            Party Logo
+                          </td>
+                          <td>
+                            Action
+                          </td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td />
+                          <td>
+                            No Candidate for this office
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </article>
+              </div>
+              <Footer>
+                <footer>
+                  <span>
+                    Copyright@2019  @fantastic-genius (Andela Bootcamp Cycle41)
+                  </span>
+                </footer>
+              </Footer>
+            </div>
+          </DashboardContainer>
+        </Vote>
+      </Connect(Vote)>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

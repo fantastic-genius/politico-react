@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CandidateRow /> Rendering should render CandidateRow correctly in debug mode 1`] = `
+<tr>
+  <td>
+    <input
+      className="choice"
+      name="choice"
+      onClick={[Function]}
+      type="checkbox"
+    />
+  </td>
+  <td>
+    <img
+      alt="john"
+      src="https://w.pe./img"
+    />
+  </td>
+  <td>
+    <a>
+      john mark
+    </a>
+  </td>
+  <td>
+    All peoples party
+  </td>
+  <td>
+    <img
+      alt="Logo"
+      src="https://app.com/logo"
+    />
+  </td>
+  <td>
+    <button
+      className="btn btn-warning hide"
+      data-candidateid={1}
+      onClick={[MockFunction]}
+    >
+      Vote
+    </button>
+  </td>
+</tr>
+`;

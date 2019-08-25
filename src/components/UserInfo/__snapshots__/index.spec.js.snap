@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserInfo /> Rendering should render UserInfo correctly in debug mode 1`] = `
+<ContextProvider
+  value={null}
+>
+  <UserInfo
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+    user={Object {}}
+  />
+</ContextProvider>
+`;

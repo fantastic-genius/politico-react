@@ -27,7 +27,7 @@ exports[`<Signup /> Rendering should render signup page correctly 1`] = `
 </Router>
 `;
 
-exports[`<Signup /> Rendering should render signup page correctly woth its children 1`] = `
+exports[`<Signup /> Rendering should render signup page correctly with its children 1`] = `
 <BrowserRouter>
   <Router
     history={

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DashboardContainer /> Rendering should render DashboardContainer correctly in debug mode 1`] = `
+<div
+  className="container dashboard"
+>
+  <DashboardNavBar />
+  <div
+    className="main"
+  >
+    <UserDashboardSideBar />
+  </div>
+  <Footer />
+</div>
+`;
