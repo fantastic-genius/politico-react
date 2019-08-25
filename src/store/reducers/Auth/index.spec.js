@@ -17,7 +17,7 @@ const user = {
   password: 'password'
 };
 
-describe('Signup Reducer', () => {
+describe('Auth Reducer', () => {
   it('Should return the initial state', () => {
     expect(authReducer (undefined, {})).toEqual(initialState);
   });
@@ -81,6 +81,7 @@ describe('Signup Reducer', () => {
     const payload = {
       user,
       isAuthenticated: true,
+      token: 'gfhfgdhjkgytuio'
     }
     expect(authReducer (
       initialState, {

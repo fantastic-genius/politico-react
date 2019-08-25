@@ -16,8 +16,10 @@ const signup = (values) => async (dispatch) => {
 
 const setUser = () => dispatch => {
   const user = JSON.parse(localStorage.getItem('user'));
+  const token = localStorage.getItem('token');
+
   if(user){
-    dispatch({type: 'SET_USER', payload: {user, isAuthenticated: true}});
+    dispatch({type: 'SET_USER', payload: {user, token, isAuthenticated: true}});
   }else{
     dispatch({type: 'SET_USER', payload: {user: {}, isAuthenticated: false }});
   }

@@ -15,7 +15,7 @@ describe('<Signup />', () => {
       expect(component).toMatchSnapshot();
     });
 
-    it('should render signup page correctly woth its children', () => {
+    it('should render signup page correctly with its children', () => {
         const component = mount(
           <Router>
             <Signup store={ store }/>

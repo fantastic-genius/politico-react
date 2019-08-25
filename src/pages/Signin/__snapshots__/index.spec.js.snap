@@ -27,7 +27,7 @@ exports[`<Signin /> Rendering should render signin page correctly 1`] = `
 </Router>
 `;
 
-exports[`<Signin /> Rendering should render signin page correctly woth its children 1`] = `
+exports[`<Signin /> Rendering should render signin page correctly with its children 1`] = `
 <BrowserRouter>
   <Router
     history={

@@ -542,6 +542,7 @@ article p{
 @media screen and (min-width: 800px){
     .container{
         width: 100%;
+        max-width: none;
         font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
         font-size: 1.6rem;
     }
@@ -627,6 +628,7 @@ article p{
         width: 10rem;
         height: 10rem;
         border-radius: 5rem;
+        display: initial;
     }
 
     .profile-con .btn-con input{
