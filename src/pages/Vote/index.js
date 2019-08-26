@@ -98,7 +98,7 @@ const Vote = (props) => {
           <table id="candidates-table">
             <thead>
               <tr>
-                <td></td>
+                <td>Select</td>
                 <td>Photo</td>
                 <td>Politician Name</td>
                 <td>Party</td>

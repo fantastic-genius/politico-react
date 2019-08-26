@@ -75,11 +75,11 @@ exports[`<NavBar /> Rendering of NavBar and children should render NavBar correc
                       onClick={[Function]}
                     >
                       <Button
-                        className="btn"
+                        className="btn nav-btn"
                         value="Sign Up"
                       >
                         <button
-                          className="btn"
+                          className="btn nav-btn"
                         >
                           Sign Up
                         </button>
@@ -94,11 +94,11 @@ exports[`<NavBar /> Rendering of NavBar and children should render NavBar correc
                       onClick={[Function]}
                     >
                       <Button
-                        className="btn"
+                        className="btn nav-btn"
                         value="Login"
                       >
                         <button
-                          className="btn"
+                          className="btn nav-btn"
                         >
                           Login
                         </button>
@@ -191,11 +191,11 @@ exports[`<NavBar /> Rendering of NavBar and children should render NavBar correc
                       onClick={[Function]}
                     >
                       <Button
-                        className="btn"
+                        className="btn nav-btn"
                         value="Sign Up"
                       >
                         <button
-                          className="btn"
+                          className="btn nav-btn"
                         >
                           Sign Up
                         </button>
@@ -210,11 +210,11 @@ exports[`<NavBar /> Rendering of NavBar and children should render NavBar correc
                       onClick={[Function]}
                     >
                       <Button
-                        className="btn"
+                        className="btn nav-btn"
                         value="Login"
                       >
                         <button
-                          className="btn"
+                          className="btn nav-btn"
                         >
                           Login
                         </button>

@@ -55,7 +55,7 @@ const Signup = ({
     <div className="container home-con">
       <NavBar />
       <div className="item-box">
-        <div className="header">
+        <div className="header authform-header">
           <h2>Sign Up</h2>
         </div>
         <form id="signup-form" onSubmit={ onSignup }>

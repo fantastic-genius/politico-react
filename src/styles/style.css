@@ -194,7 +194,6 @@ input[type=submit], input[type=button]{
     flex: 0 0 20vw;
 }
 .home-con .sign-btn{
-    flex: 0 0 30vw;
     padding-top: 1.5rem;
     padding-right: 1rem;
     text-align: right;
@@ -323,6 +322,7 @@ input[type=submit], input[type=button]{
     height: 8rem;
     border: .1rem solid #01579b;
     border-radius: 4rem;
+    display: initial;
 }
 
 .dashboard header button{
@@ -488,7 +488,7 @@ article p{
 }
 
 .sign-btn button{
-    margin: 0.5rem 0;
+    margin: 0.5rem 0.5rem;
     padding: 1rem .5rem;
     font-size: 1.2rem;
 }
@@ -538,6 +538,13 @@ article p{
     font-size: 1.7rem;
 }
 
+.authform-header{
+    font-size: 2.5rem;
+}
+
+.home-btn .nav-btn{
+    background-color: #000ca0c4;
+}
 
 @media screen and (min-width: 800px){
     .container{

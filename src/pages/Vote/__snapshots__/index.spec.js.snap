@@ -105,9 +105,22 @@ exports[`<Vote /> Rendering should render Vote page correctly with its children 
                     <div
                       className="title"
                     >
-                      <h3>
-                        User Dashboard
-                      </h3>
+                      <div
+                        className="app-name"
+                      >
+                        <Link
+                          to="/"
+                        >
+                          <a
+                            href="/"
+                            onClick={[Function]}
+                          >
+                            <h2>
+                              POLITICO
+                            </h2>
+                          </a>
+                        </Link>
+                      </div>
                     </div>
                     <div
                       className="logout-con"
@@ -228,7 +241,9 @@ exports[`<Vote /> Rendering should render Vote page correctly with its children 
                     >
                       <thead>
                         <tr>
-                          <td />
+                          <td>
+                            Select
+                          </td>
                           <td>
                             Photo
                           </td>
@@ -338,9 +353,22 @@ exports[`<Vote /> Rendering should render Vote page correctly with its children 
                     <div
                       className="title"
                     >
-                      <h3>
-                        User Dashboard
-                      </h3>
+                      <div
+                        className="app-name"
+                      >
+                        <Link
+                          to="/"
+                        >
+                          <a
+                            href="/"
+                            onClick={[Function]}
+                          >
+                            <h2>
+                              POLITICO
+                            </h2>
+                          </a>
+                        </Link>
+                      </div>
                     </div>
                     <div
                       className="logout-con"
@@ -461,7 +489,9 @@ exports[`<Vote /> Rendering should render Vote page correctly with its children 
                     >
                       <thead>
                         <tr>
-                          <td />
+                          <td>
+                            Select
+                          </td>
                           <td>
                             Photo
                           </td>

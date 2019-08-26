@@ -16,10 +16,10 @@ const NavBar = ({isAuthenticated}) => (
           !isAuthenticated ?
             ( <span className="home-btn">
                 <Link to='/signup'>
-                  <Button className="btn" value='Sign Up'/>
+                  <Button className="btn nav-btn" value='Sign Up'/>
                 </Link>
                 <Link to='/login'>
-                  <Button className="btn" value='Login'/>
+                  <Button className="btn nav-btn" value='Login'/>
                 </Link>
               </span>
             ) : (

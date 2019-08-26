@@ -123,11 +123,11 @@ exports[`<Home /> Rendering should render Home page correctly woth its children 
                             onClick={[Function]}
                           >
                             <Button
-                              className="btn"
+                              className="btn nav-btn"
                               value="Sign Up"
                             >
                               <button
-                                className="btn"
+                                className="btn nav-btn"
                               >
                                 Sign Up
                               </button>
@@ -142,11 +142,11 @@ exports[`<Home /> Rendering should render Home page correctly woth its children 
                             onClick={[Function]}
                           >
                             <Button
-                              className="btn"
+                              className="btn nav-btn"
                               value="Login"
                             >
                               <button
-                                className="btn"
+                                className="btn nav-btn"
                               >
                                 Login
                               </button>
