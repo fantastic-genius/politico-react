@@ -25,7 +25,7 @@ const NavBar = ({isAuthenticated}) => (
             ) : (
               <span className="home-btn">
                 <Link to='/vote'>
-                  <Button className="btn" value='Dasboard'/>
+                  <Button className="btn nav-btn" value='Dasboard'/>
                 </Link>
               </span>
             )
