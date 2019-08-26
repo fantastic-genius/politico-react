@@ -9,7 +9,7 @@ import Signup from '@pages/Signup';
 import Signin from '@pages/Signin';
 import Vote from '@pages/Vote';
 import MyVote from '@pages/ViewVote';
-import PrivateRoute from '@src/PrivateRoute';
+import PrivateRoute from '@src/Route/PrivateRoute';
 
 const App = () => {
   return (

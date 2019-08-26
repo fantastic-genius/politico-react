@@ -130,11 +130,11 @@ exports[`<Signin /> Rendering should render signin page correctly with its child
                             onClick={[Function]}
                           >
                             <Button
-                              className="btn"
+                              className="btn nav-btn"
                               value="Sign Up"
                             >
                               <button
-                                className="btn"
+                                className="btn nav-btn"
                               >
                                 Sign Up
                               </button>
@@ -149,11 +149,11 @@ exports[`<Signin /> Rendering should render signin page correctly with its child
                             onClick={[Function]}
                           >
                             <Button
-                              className="btn"
+                              className="btn nav-btn"
                               value="Login"
                             >
                               <button
-                                className="btn"
+                                className="btn nav-btn"
                               >
                                 Login
                               </button>
@@ -170,7 +170,7 @@ exports[`<Signin /> Rendering should render signin page correctly with its child
               className="item-box"
             >
               <div
-                className="header"
+                className="header authform-header"
               >
                 <h2>
                   Sign In

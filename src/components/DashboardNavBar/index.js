@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import { signout } from '@actions/Auth';
 
 const DashboardNavBar = (props) => {
@@ -11,7 +11,11 @@ const DashboardNavBar = (props) => {
   return (
     <header>
       <div className="title">
-        <h3>User Dashboard</h3>
+        <div className="app-name">
+          <Link to='/'>
+            <h2>POLITICO</h2>
+          </Link>
+        </div>
       </div>
       <div className="logout-con">
         <button id="logout" className="btn btn-warning" onClick={onSignOut}><a href="#">Logout</a></button>
