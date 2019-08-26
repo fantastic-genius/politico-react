@@ -87,7 +87,7 @@ npm install
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-_To get started, please refer to the [Hosted App](https://example.com)_
+_To get started, please refer to the [Hosted App](https://politico-react-staging.herokuapp.com)_
 
 
 <!-- CONTRIBUTING -->
